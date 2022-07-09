@@ -94,6 +94,11 @@ function CardSlide() {
                             <div className="image-card-slide">
                                 <ImageCardSlide carousel={habitaciones.fotos} />
                             </div>
+
+                            <div className="button-card-inicio">
+                                <Link to='#'><button className="reservar-cards">RESERVAR</button></Link>
+                            </div>
+                            
                             <div class="card">
                                 
                                 
@@ -107,9 +112,7 @@ function CardSlide() {
                                                 <p>{habitaciones.descripcion}</p>
                                                 <h2>{habitaciones.precio}</h2>
 
-                                                <div className="button-card-inicio">
-                                                    <Link to='#'><button className="reservar-cards">RESERVAR</button></Link>
-                                                </div>
+                                                
                                                 
                                             </div>
                                         </div>

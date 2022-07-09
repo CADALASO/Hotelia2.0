@@ -12,8 +12,9 @@
 }
 
 .button-card-inicio{
+    z-index: 100;
     position: relative;
-    top: 30px;
+    top: 350px;
 }
 
 
