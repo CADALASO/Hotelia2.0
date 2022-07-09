@@ -1,0 +1,329 @@
+:root{
+    --verde-botones: #157A8A;
+    --negro: #333333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+.banner-inicio-1{
+    background-image: url('../img/hotel-1.png');
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    font-family: 'Akrobat';
+    padding: 0 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-inicio-1 h1{
+    margin-bottom: 5rem;
+    text-shadow: 3px 3px 4px #00000098;
+    font-weight:900;
+    text-align: right;
+    width: 50vw;
+    font-size: 80px;
+}
+
+.banner-inicio-1 h4{
+    margin-top: -3rem;
+    font-size: 30px;
+    text-shadow: 4px 4px 4px #000000cc;
+}
+
+.banner-inicio-2{
+    background-image: url('../img/slide2-inicio.png');
+    background-position: top;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    font-family: 'Akrobat';
+    padding: 0 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.banner-inicio-2 h1{
+    text-shadow: 3px 3px 10px #000000;
+    font-weight:900;
+    text-align: left;
+    width: 40vw;
+    font-size: 80px;
+}
+
+.banner-inicio-3{
+    background-image: url('../img/slide3-inicio.png');
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    font-family: 'Akrobat';
+    padding: 0 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-inicio-3 h1{
+    text-shadow: 3px 3px 10px #000000;
+    font-weight:900;
+    text-align: center;
+    width: 70vw;
+    font-size: 70px;
+}
+
+.buscar-inicio{
+    padding: 3rem 3rem;
+    border-radius: 42px;
+    height:12vh;
+    background-color: white;
+    width: 75vw;
+    backdrop-filter: blur(87px);
+    box-shadow: 0px 4px 17px grey;
+    margin: -4rem auto;
+}
+
+.buscar-inicio form{
+    font-family: 'Akrobat';
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.buscar-inicio-btn{
+    background-color: #157A8A;
+    font-family: 'Akrobat';
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.inputs input{
+    margin: 1rem 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 15vw;
+    height: 5vh;
+    padding: 0.2rem 1rem;
+    font-family: 'Biko';
+}
+
+.habs-flex{
+    padding-left: 3rem;
+    display: flex;
+}
+
+
+.habs-flex .hab{
+    padding-left: 3rem;
+    width: 8vw;
+}
+
+
+.icono-image{
+    background-image: url(../img/cama.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 5% center;
+}
+
+.icono-image-2{
+    background-image: url(../img/user.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 5% center;
+}
+
+.inputs .habs-flex .border-hab-1{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.inputs .habs-flex .border-hab-2{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.descubre-hotelia{
+    font-family: 'Akrobat';
+    margin: 5rem 0;
+    display: flex;
+    padding: 7rem 5rem;
+    text-align: right;
+    width: 100%;
+    height:  60vh;
+}
+
+.descubre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40vw;
+    margin: 0 1rem;
+    padding: 0 1.5rem;
+}
+
+.descubre h1{
+    font-family: 'Akrobat';
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 30px;
+}
+
+.descubre p{
+    padding-top: 2rem;
+    width: 38vw;
+    text-align: right;
+    font-family: 'Biko';
+    font-weight: 100;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.descubre-galeria{
+    padding: 3rem;
+    width: 38vw;
+    height: 55vh;
+}
+
+.descubre-galeria img{
+    width: 38vw;
+}
+
+
+.habitaciones-precios{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Akrobat';
+    
+    margin-bottom: 2rem;
+    height: 150vh;
+}
+
+.habitaciones-precios h1{
+    text-align: center; 
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+.experiencias{
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/experienciaFONDO.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: -1rem;
+}
+
+.text-experiencias{
+    display: flex;
+    align-items: center;
+    background-image: url(../img/experiencias.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45vw;
+    height: 71vh;
+}
+
+.text-exp-description{
+    padding: 0 3rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white;
+    font-size: 30px;
+}
+
+.slide-expe{
+    width: 38vw;
+}
+
+.ubicacion img{
+    width: 100%;
+}
+
+.ubicacion{
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.panoramica{
+    background-image: url(../img/footerBOG.png);
+    background-position: center;
+    background-size: cover;
+    height: 15vh;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--negro);
+    color: white;
+    font-family: 'Akrobat';
+}
+
+.line1-footer {
+    font-weight: 600;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.otros{
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.derechos{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+/* ::::::::::::::::::::::::: MODAL :::::::::::::::::::::: */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+

@@ -1,0 +1,183 @@
+:root{
+    --verde-botones: #157A8A;
+    --negro: #333333;
+}
+
+/* ------- CARDS ------- */
+
+.container-cards-inicio{
+    padding: 0rem 3rem;
+    padding-bottom: 3rem;
+    
+}
+
+.button-card-inicio{
+    position: relative;
+    top: 30px;
+}
+
+
+.card__2{
+    box-shadow: 3px 8px 10px #BEB9B9;
+    height: 45vh;
+    color: #4C4C4C;
+    background-image: url('../img/Vector\ 9.png');
+    background-position: right top;
+    background-size: scale-down;
+    background-repeat: no-repeat;
+}
+
+.line-1, .line-2, .line-3{
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+.line-1 p, .line-2 p, .line-3 p{
+    font-size: 25px;
+}
+
+.line-1 i, .line-2 i, .line-3 i{
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.texto-icono-cardback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Biko';
+    margin: 20px 0;
+}
+
+.texto-icono-cardback p{
+    margin: 0 8px;
+    font-size: 20px;
+}
+
+
+.texto-icono-cardback img{
+    width: 80%;
+}
+
+.precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Akrobat';
+}
+
+.precio p{
+    font-size: 22px;
+    font-weight: 500;
+    height: 11.5vh;
+}
+
+.precio h1{
+    font-size: 25px;
+    margin-right: 50px;
+}
+/* Imagenes de las cards */
+.cards{
+    padding: 1rem 0;
+}
+
+.habs-cards{
+    padding: 0 auto;
+    width: 26vw;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-cards-slide{
+    width: 26vw;
+    border-radius: 20px; 
+    position: relative;
+    top: -30px;
+}
+
+
+
+
+/*-------------------------*/
+
+.cards h1{
+    padding: 0 2rem;
+    font-family: 'Akrobat';
+    text-align: left;
+    padding-top: 1rem;
+}
+
+
+
+.cards p{
+    padding: 0 2rem;
+    font-family: 'Biko';
+    margin-top: -2rem;
+    line-height: 30px;
+}
+
+.cards h2{
+    padding: 0 2rem;
+    font-family: 'Biko';
+    text-align: right;
+    padding-top: 1rem;
+}
+
+ .reservar-cards {
+    position:relative;
+    top: -15px;
+    margin-left: 13rem;
+    background-color: #157A8A;
+    font-family: 'Akrobat';
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 0.7rem 3rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+
+
+/* ______________________________________________ ANIMACION ______________________________________________ */
+.container{
+    height: 100vh;
+    padding: 5rem 2rem;
+}
+
+.card{
+    height: 70vh;
+    width: 25vw;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+.card__1{
+    box-shadow: 3px 8px 10px #BEB9B9;
+    height: 45vh;
+    width: 25vw;
+    position: absolute;
+    background-color: white;
+    border-radius:10px ;
+}
+
+.card__1{
+    z-index: 5;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card__2{
+    border-radius:10px;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
