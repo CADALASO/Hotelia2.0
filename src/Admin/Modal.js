@@ -45,12 +45,12 @@ function Modal({ habitaciones, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input className='no-hab-edit' />
+                                        <input className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input className='nombre-hab-edit' />
+                                        <input className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
@@ -83,9 +83,9 @@ function Modal({ habitaciones, close }) {
                                 <div className='line4-habitacion-edit'>
                                     <div className='flex-form-edit'>
                                         <label>Fotos:</label>
-                                        <input className='fotos-edit'/>
-                                        <input className='fotos-edit'/>
-                                        <input className='fotos-edit'/>
+                                        <input className='fotos-edit' type='url'/>
+                                        <input className='fotos-edit' type='url'/>
+                                        <input className='fotos-edit' type='url'/>
                                     </div>
                                 </div>
                                 <div className='line5-habitacion-edit'>

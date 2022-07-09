@@ -18,27 +18,27 @@ function FormHab() {
                     <div className='line1-habitacion'>
                         <div className='flex-form'>
                             <label>No. de Hab:</label>
-                            <input className='no-hab' />
+                            <input className='no-hab' type='number' />
                         </div>
 
                         <div className='flex-form nombre-hab'>
                             <label>Nombre de Habitación:</label>
-                            <input className='nombre-hab' />
+                            <input className='nombre-hab' type='text' />
                         </div>
                     </div>
 
                     <div className='line2-habitacion'>
                         <div className='flex-form'>
                             <label>Capacidad de Personas:</label>
-                            <input />
+                            <input type='number'/>
                         </div>
                         <div className='flex-form'>
                             <label>Precio:</label>
-                            <input className='precio-form'/>
+                            <input className='precio-form' type='number'/>
                         </div>
                         <div className='flex-form'>
                             <label>No. de Camas:</label>
-                            <input />
+                            <input type='number'/>
                         </div>
 
                     </div>
@@ -54,9 +54,9 @@ function FormHab() {
                     <div className='line4-habitacion'>
                         <div className='flex-form'>
                             <label>Fotos:</label>
-                            <input />
-                            <input />
-                            <input />
+                            <input type='text' />
+                            <input type='text'/>
+                            <input type='text'/>
                         </div>
 
                     </div>
