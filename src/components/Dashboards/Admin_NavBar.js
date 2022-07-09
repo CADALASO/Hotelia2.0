@@ -31,7 +31,7 @@ function Admin_NavBar() {
         <hr className="line-nav" />
         <Link to="/" className="item"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
         <hr className="line-nav" />
-        <Link to="/" className="item"><i class="fa-solid fa-user-pen"></i> PERFIL</Link>
+        <Link to="/" className="item"><i class="fa-solid fa-user-pen"></i> MI PERFIL</Link>
       </div>
     </nav >
 

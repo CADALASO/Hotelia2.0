@@ -65,12 +65,12 @@ img{
 
 button{
     font-family:'Akrobat';
-    background: #00A0C6;
+    background: #157A8A;
     padding: .5rem 2rem;
     font-weigth: bold;
     border-radius:5px;
     font-size:18px;
-    color: #000000;
+    color: #FFFFFF;
     margin:.5rem 0; 
 }
 
@@ -78,9 +78,9 @@ Input{
     width: 100%;
     padding: 0.5rem;
     font-family:'Biko';
-    border: 0.5px solid #00A0C6;
+    border: 0.5px solid #157A8A;
     border-radius:5px;
-    box-shadow: 1px 1px 1px #00A0C6;
+    box-shadow: 1px 1px 1px #157A8A;
     margin: 0.2rem 0;
 
     &::placeholder{
@@ -91,9 +91,9 @@ select{
     width: 100%;
     padding: 0.5rem 0.2rem;
     font-family:'Biko';
-    border: 0.5px solid #00A0C6;
+    border: 0.5px solid #157A8A;
     border-radius:5px;
-    box-shadow: 1px 1px 1px #00A0C6;
+    box-shadow: 1px 1px 1px #157A8A;
     margin:0.5rem 0;
 }
 label{
@@ -105,7 +105,7 @@ font-family:'Biko';
 h2{
     font-family:'Akrobat'; 
     text-shadow: 1px 1px 1px #000000;
-    color:#B2B3B3;
+    color:#157A8A;
     font-size:30px;
     margin:1rem 0;
 }

@@ -5,6 +5,7 @@ import Admin_Perfil from '../admin/PerfilAdmin'
 import Form from '../components/formRegistration/Form'
 import Inicio from '../pages/Inicio'
 import User_Dashboard from '../user/Dashboard'
+import User_Perfil from '../user/PerfilUser'
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
         <Route path='/User-Dashboard' element={<User_Dashboard/>}></Route>
         <Route path='/Formulario' element={<Form/>}></Route>
         <Route path='/Admin-Perfil' element={<Admin_Perfil />}></Route>
+        <Route path='/User-Perfil' element={<User_Perfil/>}></Route>
 
       </Routes>
     </BrowserRouter>

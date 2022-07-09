@@ -33,7 +33,7 @@ function User_Dashboard() {
                         <Link to="/" className="group-item"><i class="fa-solid fa-calendar-check"></i> MIS RESERVAS</Link>
                     </div>
                     <div>
-                        <Link to="/" className="group-item"><i class="fa-solid fa-user-pen"></i> PERFIL</Link>
+                        <Link to="/" className="group-item"><i class="fa-solid fa-user-pen"></i>MI PERFIL</Link>
                     </div>
                 </div>
             </div>

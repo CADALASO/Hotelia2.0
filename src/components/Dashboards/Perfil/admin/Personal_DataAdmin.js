@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../assets/css/Perfil_Admin.css'
+import '../../../../assets/css/Perfil_Admin.css'
 function Personal_dataAdmin() {
     return (
         <div>

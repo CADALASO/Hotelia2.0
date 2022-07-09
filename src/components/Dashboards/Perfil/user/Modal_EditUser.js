@@ -1,5 +1,5 @@
 import React from "react";
-import { Overlay, ContainerModal, HeaderModal, ButtonClose, BodyModal } from "../../../assets/elements/Modal_Edit";
+import { Overlay, ContainerModal, HeaderModal, ButtonClose, BodyModal } from "../../../../assets/elements/Modal_EditUser";
 
 const Modal_EditAdmin = ({ children, status, changeStatus, positionModal }) => {
     return (

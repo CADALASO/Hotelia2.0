@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal_EditAdmin from './Modal_EditAdmin';
-import '../../../assets/css/Perfil_Admin.css'
+import '../../../../assets/css/Perfil_Admin.css'
 
 function Security_dataAdmin() {
     const [statusModalSeg, changeStatusModalSeg] = useState(false);
@@ -25,17 +25,17 @@ function Security_dataAdmin() {
             >
                 <h2>DATOS DE SEGURIDAD</h2>
                 <div>
-                    <label className='label'>Contraseña actual:</label>
+                    <label >Contraseña actual:</label>
                     <input
                         tipo="Password"
                         name="actual"
                     />
-                    <label className='label'>Nueva contraseña:</label>
+                    <label>Nueva contraseña:</label>
                     <input
                         tipo="Password"
                         name="nueva"
                     />
-                    <label className='label'>Repetir nueva contraseña:</label>
+                    <label>Repetir nueva contraseña:</label>
                     <input
                         tipo="Password"
                         name="repetir"

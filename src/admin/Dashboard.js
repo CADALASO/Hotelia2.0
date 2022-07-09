@@ -30,7 +30,7 @@ function Admin_Dashboard() {
           <Link to="/" className="group-item-admin"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
         </div>
         <div>
-          <Link to="/" className="group-item-admin"><i class="fa-solid fa-user-pen"></i> PERFIL</Link>
+          <Link to="/" className="group-item-admin"><i class="fa-solid fa-user-pen"></i>MI PERFIL</Link>
         </div>
       </div>
     </div>

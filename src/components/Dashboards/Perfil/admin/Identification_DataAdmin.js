@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import photo_Admin from '../../../assets/img/perfilADMIN.png';
+import photo_Admin from '../../../../assets/img/perfilADMIN.png';
 import Modal_EditAdmin from './Modal_EditAdmin';
 
 function Iden_dataAdmin() {
@@ -26,20 +26,20 @@ function Iden_dataAdmin() {
                 <img src={photo_Admin} alt="photo Admin" />
                 <button>CAMBIAR FOTO</button>
                 <div>
-                    <label className='label'>Nombre(s):</label>
+                    <label >Nombre(s):</label>
                     <input
                         tipo="text"
                         name="nombre"
                         placeholder="Carol Daniela"
                     />
-                    <label className='label'>Apellido(s):</label>
+                    <label >Apellido(s):</label>
                     <input
                         tipo="text"
                         name="apellido"
                         placeholder="Garcia Carrato"
                     />
                     <div>
-                        <label className='label'>Tipo de documento:</label>
+                        <label >Tipo de documento:</label>
                         <select name="select">
                             <option value="1" selected>Cédula de Ciudadania</option>
                             <option value="2" >Cédula de Extranjeria</option>
@@ -48,7 +48,7 @@ function Iden_dataAdmin() {
                             <option value="5">Pasaporte</option>
                         </select>
                     </div>
-                    <label className='label'>Número de documento:</label>
+                    <label>Número de documento:</label>
                     <input
                         tipo="text"
                         name="numdocumento"
