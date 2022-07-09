@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Akrobat';
+  src: url(assets/fonts/Akrobat-Regular.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Biko';
+  src: url(assets/fonts/Biko_Regular.otf);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --dark: #333;
+  --blue: #00A0C6;
+  --white: #fff;
+  --gray: #B2B3B3;
+  --black: #000;
+  --green: #157A8A;
+}
+
+body {
+  font-size: 16px;
+}
+

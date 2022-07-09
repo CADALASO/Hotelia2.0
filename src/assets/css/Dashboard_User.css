@@ -1,0 +1,104 @@
+.background{
+    background-color: var(--gray);
+}
+
+.btn-salir-dashboard-admin{
+    font-family:'Biko';
+    color: var(--white);
+    display: flex;
+    justify-content: end;
+    padding: 2rem 2rem 0 0;
+}
+
+.group-header-user{
+    display: none;
+}
+
+.group-menu-user{
+    display: none;
+}
+
+.group-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.photo-Dashboard {
+    width: 8rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid var(--dark);
+}
+
+.welcome-title {
+    font-family: 'Biko';
+    color: var(--green);
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+@media screen and (min-width:768px) {
+
+    .border{
+        border-right: 2px solid var(--dark);
+        border-left: 2px solid var(--dark);
+
+    }
+
+    .btn-salir-dashboard{
+        font-family:'Biko';
+        color: var(--dark);
+        display: flex;
+        justify-content: end;
+        padding: 2rem 2rem 0 0;
+    }
+
+    .group-header-user{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .group-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        color: var(--dark);
+    }
+
+    .group-item i{
+        margin-bottom:1rem ;
+    }
+
+    .group-menu-user{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-family:'Akrobat';
+        font-weight: bold;
+        font-size: 24px;
+        padding: 0 0 1rem 0;
+        position: relative;
+        right: 2rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .imagotype-dark{
+        width: 8rem;
+    }
+
+    .photo-Dashboard {
+        width: 10rem;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+}

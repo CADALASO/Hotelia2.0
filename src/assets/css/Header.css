@@ -1,0 +1,170 @@
+.navbar-inicio{
+    height: 20vh;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 25px 50px;
+}
+
+.logo{
+    height: 60px;
+}
+
+.button-reserva{
+    float: right;
+    margin-right: 2rem;
+    line-height: 115px;
+}
+
+.button-reserva button{
+    background-color: #157A8A;
+    font-family: 'Akrobat';
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+.navbar-ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.navbar-ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 1rem;
+    font-size: 18px;
+}
+
+.link{
+    color: #8B8B8B;
+    text-decoration: none;
+    font-family: 'Biko';
+}
+
+.login{
+    color: #157A8A;
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 120px;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+@media (max-width: 952px){
+    .enlace{
+        width: 10px;
+        padding-left: 20px;
+    }
+
+    .logo{
+        height: 10vh;
+    }
+    .navbar-inicio ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .navbar-inicio{
+        height: 20vh;
+        width: 100%;
+    }
+
+    .navbar-ul{
+        position: fixed;
+        width: 90vw;
+        height: 100vh;
+        background: #fff;
+        border-top: 2px solid grey;
+        top: 95px;
+        left: -200%;
+        transition: all .5s;
+    }
+    .navbar-inicio ul li{
+        display: block;
+        margin: 40px 0rem;
+        padding: 0;
+        width: 78vw;
+        text-align: center;
+        line-height: 30px;
+    }
+    .navbar-inicio ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ .navbar-ul{
+        left:0;
+    }
+}
+
+@media only screen and (max-width : 389px) {
+    .navbar-inicio{
+        height: 30vh;
+        width: 100%;
+    }
+
+    .navbar-ul{
+        position: fixed;
+        width: 90vw;
+        height: 100vh;
+        background: #fff;
+        border-top: 2px solid grey;
+        top: 150px;
+        left: -200%;
+        transition: all .5s;
+    }
+    .navbar-inicio ul li{
+        display: block;
+        margin: 40px 0rem;
+        padding: 0;
+        width: 78vw;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .button-reserva{
+        float: right;
+        margin: 4rem 2rem;
+        line-height: 115px;
+    }
+    
+    .button-reserva button{
+        background-color: #157A8A;
+        font-family: 'Akrobat';
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 0.7rem 2rem;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+}
+
+
+@media only screen and (min-device-width : 390px) and (max-device-width : 400px){
+    .button-reserva{
+        float: right;
+        margin: 0rem 1rem;
+        line-height: 115px;
+    }
+}
