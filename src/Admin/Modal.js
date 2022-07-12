@@ -81,11 +81,18 @@ function Modal({ habitaciones, close }) {
                             </div>
                             <div className='column-2'>
                                 <div className='line4-habitacion-edit'>
-                                    <div className='flex-form-edit'>
+                                    <div className='flex-form-edit  file-select' id="src-file1">
                                         <label>Fotos:</label>
-                                        <input className='fotos-edit' type='url'/>
-                                        <input className='fotos-edit' type='url'/>
-                                        <input className='fotos-edit' type='url'/>
+                                        <div className='flex-select'>
+                                            <input className='fotos-edit' type='file' />
+                                            <div className='botones-fotos'>
+                                                <button className='yes-foto'><i class="fa-solid fa-plus"></i></button>
+                                                <button className='delete-foto'><i class="fa-solid fa-trash-can"></i></button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        
                                     </div>
                                 </div>
                                 <div className='line5-habitacion-edit'>
