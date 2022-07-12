@@ -50,7 +50,9 @@ function ListHabs() {
                                             }}
                                             className="reservar-cards-list">EDITAR
                                         </button>
-
+                                        {
+                                            modal ? <ModalEdit close={setModal} habitacion={habitacion} /> : null
+                                        }
                                     </div>
 
                                     <div class="card-list">
@@ -126,9 +128,7 @@ function ListHabs() {
 
 
                 </div>
-                {
-                    modal ? <ModalEdit close={setModal} habitacion={habitacion} /> : null
-                }
+                
 
             </div>
 

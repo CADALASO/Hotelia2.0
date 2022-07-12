@@ -33,7 +33,7 @@ function Modal({ habitaciones, close }) {
             <div className='modalEdit'>
                 <div className='formulario'>
                     <div className='cerrar-modal-edit'>
-                        <button onClick={handleClose}>
+                        <button onClick={handleClose} className='button-cerrar'>
                             <img src={Cerrar} alt='cerrar' />
                         </button>
                     </div>
