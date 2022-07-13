@@ -184,4 +184,36 @@ label{
     padding-left: 3.5rem;
 }
 
+/* ----- -----  Estilos para Validacion ----- ----- */
+.grupoinput{
+    position: relative;
+    z-index: 90;
+}
+
+.grupoinput input{
+    padding:2px 1rem;
+}
+
+.grupoinput input:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.leyendaError{
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #bb2929;
+    /* display: none; */
+    /* color: #1ed12d; */
+}
+
+.iconoValidacion{
+    position: absolute;
+    right: 330px;
+    bottom: 25px;
+    z-index: 100;
+    font-size: 20px;
+    /* opacity: 0; */
+}
 
