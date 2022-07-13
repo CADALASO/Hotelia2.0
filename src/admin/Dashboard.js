@@ -24,10 +24,10 @@ function Admin_Dashboard() {
       </div>
       <div className='group-menu-admin'>
         <div>
-          <Link to="/" className="group-item-admin"><i class="fa-solid fa-bed"></i> HABITACIONESs</Link>
+          <Link to="/" className="group-item-admin"><i class="fa-solid fa-bed"></i> HABITACIONES</Link>
         </div>
         <div className='border-admin'>
-          <Link to="/" className="group-item-admin"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓNn</Link>
+          <Link to="/" className="group-item-admin"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
         </div>
         <div>
           <Link to="/" className="group-item-admin"><i class="fa-solid fa-user-pen"></i> PERFIL</Link>
