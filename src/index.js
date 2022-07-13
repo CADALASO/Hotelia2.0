@@ -4,7 +4,6 @@ import './index.css';
 
 import AppRoutes from './routes/AppRoutes';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AppRoutes/>

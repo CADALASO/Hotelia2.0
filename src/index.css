@@ -1,6 +1,11 @@
 @font-face {
   font-family: 'Akrobat';
-  src: url(assets/fonts/Akrobat-Regular.otf);
+  src: url(assets/fonts/Akrobat-Regular.otf) url(assets/fonts/Biko_Bold.otf);
+}
+
+@font-face {
+  font-family: 'AkrobatBold';
+  src: url(assets/fonts/Biko_Bold.otf);
 }
 
 @font-face {

@@ -1,24 +1,3 @@
-.btn {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
-.btn-save {
-    background-color: var(--green);
-    font-family: 'Akrobat';
-    color: var(--white);
-    padding: .5rem 6.3rem;
-    text-transform: uppercase;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px var(--black);
-    font-size: 18px;
-}
-
-.container-elderly {
-    display: flex;
-    flex-direction: column;
-}
 
 .containerForm {
     background-image: url(../img/fondoLOGIN.png);
@@ -29,7 +8,7 @@
 
 .container-photo {
     border: 0.5px solid var(--white);
-    width: 90%;
+    width: 100%;
     height: 200px;
     font-family: 'Biko';
     color: var(--white);
@@ -45,30 +24,6 @@
 .container-photo i {
     font-size: 50px;
     margin-bottom: 1rem;
-}
-
-.container-inputs {
-    width: 90%;
-    margin: auto;
-}
-
-.container-select {
-    display: flex;
-    flex-direction: column;
-}
-
-.container-select select,
-.date input {
-    width: 100%;
-    height: 33px;
-}
-
-.form {
-    background-color: rgba(51, 51, 51, .8);
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 20px;
-    padding: 1rem 1rem;
 }
 
 .headerForm {
@@ -93,53 +48,11 @@
     text-shadow: 1px 1px 1px var(--black);
 }
 
-.input {
-    background-color: rgba(51, 51, 51, 0);
-    border: 0.5px solid var(--white);
-    box-shadow: 0.5px 0.5px 1px var(--white);
-    padding: .5rem 0;
-    margin: .5rem 0;
-    border-radius: 5px;
-}
-
-.input-email,
-.date,
-.w-input {
-    margin: 0 auto;
-    width: 90%;
-}
-
-.input-email input {
-    width: 100%;
-    margin: .5rem 0;
-}
-
-.input::placeholder {
-    padding-left: 5px;
-}
-
-.label,
-.input,
-.input::placeholder {
-    color: var(--white);
-    font-family: 'Biko';
-}
-
 .title-Form {
     font-family: 'Akrobat';
     color: var(--white);
     text-align: center;
     margin: 2rem 0;
-}
-
-.w {
-    width: 100%;
-    margin: .5rem auto;
-}
-
-.w-input input {
-    width: 100%;
-    margin: .5rem auto;
 }
 
 @media screen and (min-width:768px) {
@@ -163,28 +76,11 @@
         height: 255px;
     }
 
-    .container-input-iden {
-        display: flex;
-    }
-
-    .container-inputs {
-        width: 60%;
-    }
-    .input-email,
-.date,
-.w-input {
-    width: 95%;
-}
 }
 
 @media screen and (min-width:1024px) {
     .form{
         width: 80%;
-    }
-    .group-input{
-        display: flex;
-        width: 95%;
-        margin: auto;
     }
     .headerForm img {
         width: 150px;
@@ -192,8 +88,5 @@
     }
     .headerForm i {
         margin: 1rem 2rem 0 0;
-    }
-    .m{
-        margin-right: 3rem;
     }
 }
