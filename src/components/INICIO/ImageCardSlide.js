@@ -16,7 +16,7 @@ function ImageCardSlide({ carousel }) {
       cssEase: "linear"
   };
   return (
-    <div className="img-cards-slide">
+    <div>
       <Slider {...settings}>
         {
           carousel?.map((imagen, index) => {

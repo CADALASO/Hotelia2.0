@@ -1,11 +1,36 @@
-body {
+@font-face {
+  font-family: 'Akrobat';
+  src: url(assets/fonts/Akrobat-Regular.otf) url(assets/fonts/Biko_Bold.otf);
+}
+
+@font-face {
+  font-family: 'AkrobatBold';
+  src: url(assets/fonts/Biko_Bold.otf);
+}
+
+@font-face {
+  font-family: 'Biko';
+  src: url(assets/fonts/Biko_Regular.otf);
+}
+
+* {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --dark: #333;
+  --blue: #00A0C6;
+  --white: #fff;
+  --gray: #B2B3B3;
+  --black: #000;
+  --green: #157A8A;
 }
+
+body {
+  font-size: 16px;
+}
+
