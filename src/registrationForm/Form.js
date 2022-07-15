@@ -1,25 +1,32 @@
-import '../assets/css/Form.css';
+import '../assets/css/FormReg.css';
 import imagotype_white from '../assets/img/imagotype-white.png';
 import {
+    Label,
     RegistrationForm,
     ButtonContainer,
     SaveButton,
     SuccessMessage,
     ErrorMessage
-} from '../assets/elements/Registration_Form';
+} from '../assets/elements/RegistrationForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import Input from '../components/registrationForm/Input';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Select, MenuItem } from "@mui/material";
+import countryArr from '../components/registrationForm/CountrySelect';
+
 
 
 const Form = () => {
 
+    const [selectedCountry, setSelectedCountry] = useState("");
+
+    const selectCountryHandler = (value) => setSelectedCountry(value);
     const [nombre, cambiarNombre] = useState({ campo: "", valido: null });
     const [apellido, cambiarApellido] = useState({ campo: "", valido: null });
     const [numDocumento, cambiarNumDocumento] = useState({ campo: "", valido: null });
     const [correo, cambiarCorreo] = useState({ campo: "", valido: null });
-    const [fecha, cambiarFecha] = useState({campo: "", valido: null});
+    const [fecha, cambiarFecha] = useState({ campo: "", valido: null });
     const [telefono, cambiarTelefono] = useState({ campo: "", valido: null });
     const [validForm, changeValidForm] = useState(null);
 
@@ -49,6 +56,7 @@ const Form = () => {
             changeValidForm(false);
         }
     }
+
     return (
         <main className='containerForm'>
             <i class="fa-solid fa-circle-arrow-left"></i>
@@ -110,6 +118,22 @@ const Form = () => {
                     label="Fecha de nacimiento"
                     errorLegend="Ingresa tu fecha de nacimiento."
                 />
+                <div>
+                    <Label>País de origen</Label>
+                    <div>
+                        <Select
+                            value={selectedCountry}
+                            onChange={(e) => selectCountryHandler(e.target.value)}
+                        >
+                            {!!countryArr?.length &&
+                                countryArr.map(({ label, value }) => (
+                                    <MenuItem key={value} value={value} >
+                                        {label}
+                                    </MenuItem>
+                                ))}
+                        </Select>
+                    </div>
+                </div>
                 <Input
                     estado={telefono}
                     cambiarEstado={cambiarTelefono}

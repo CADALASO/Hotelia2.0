@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Footer() {
+
   return (
     <div>
       <section className='panoramica'></section>

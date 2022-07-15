@@ -46,5 +46,5 @@ let genero = [
 ]
 
 export function getAll(){
-    return tipodoc, genero;
+    return tipodoc;
 }

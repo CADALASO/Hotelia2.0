@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import photo_User from '../../../../assets/img/perfilUSER.png';
-import Modal_EditUser from './Modal_EditUser';
+import photoUser from '../../../../assets/img/perfilUSER.png';
+import ModalEditUser from './ModalEditUser';
+import '../../../../assets/css/PerfilUser.css'
 
-function Iden_dataUser() {
+
+function IdendataUser() {
 
     const [statusModalIden, changeStatusModalIden] = useState(false);
 
 
     return (
         <div className='container-iden-u'>
-            <img src={photo_User} alt="photo User" className='photoPerfil-u' />
+            <img src={photoUser} alt="photoUser" className='photoPerfil-u' />
             <div className='container-text-u'>
                 <h2 className='Caption-u'>DATOS DE IDENTIFICACIÓN</h2>
                 <p className='text-u'><span>Nombre:</span><br />Javier Perez Ramirez</p>
@@ -19,11 +21,11 @@ function Iden_dataUser() {
                     <button className='btn-edit-u green-u' onClick={() => changeStatusModalIden(!statusModalIden)}>EDITAR</button>
                 </div>
             </div>
-            <Modal_EditUser
+            <ModalEditUser
                 status={statusModalIden}
                 changeStatus={changeStatusModalIden}
             >
-                <img src={photo_User} alt="photo User" />
+                <img src={photoUser} alt="photoUser" />
                 <button>CAMBIAR FOTO</button>
                 <div>
                     <label>Nombre(s):</label>
@@ -56,10 +58,10 @@ function Iden_dataUser() {
                     />
                 </div>
                 <button>GUARDAR CAMBIOS</button>
-            </Modal_EditUser>
+            </ModalEditUser>
         </div>
 
     )
 }
 
-export default Iden_dataUser;
+export default IdendataUser;

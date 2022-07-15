@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../../assets/css/Perfil_Admin.css'
-function Personal_dataAdmin() {
+import '../../../../assets/css/PerfilAdmin.css'
+function PersonalDataAdmin() {
     return (
         <div>
             <div className='container-color align'>
@@ -29,4 +29,4 @@ function Personal_dataAdmin() {
     )
 }
 
-export default Personal_dataAdmin;
+export default PersonalDataAdmin;

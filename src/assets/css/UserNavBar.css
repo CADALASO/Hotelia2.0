@@ -1,27 +1,27 @@
-.admin-nav {
-    background-color: var(--dark);
+.user-nav {
+    background-color: var(--gray);
     padding: 1rem 10px;
     display: flex;
     flex-direction: column;
 }
 
-.btn-menu {
+.btn-menu-user {
     font-size: 1.8rem;
     cursor: pointer;
 }
 
-.btn-menu i {
+.btn-menu-user i {
     padding: 5px 6px;
-    color: var(--white);
+    color: var(--dark);
 }
 
-.btn-salir {
+.btn-salir-user {
     font-family: 'Biko';
-    color: var(--white);
+    color: var(--dark);
     font-size: 14px;
 }
 
-.btn-salir img {
+.btn-salir-user img {
     width: 1.2rem;
 }
 
@@ -52,21 +52,16 @@
     font-weight: bold;
 }
 
-.item {
-    color: var(--white);
+.item-user {
+    color: var(--dark);
     margin: 1rem 0;
     text-align: center;
 }
 
-.item:hover {
-    transform: scale(1.2);
-    transition: transform;
-}
-
-.line-nav {
+.line-nav-user {
     width: 70%;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--dark);
     margin: auto;
 }
 
@@ -76,12 +71,12 @@
 }
 
 @media screen and (min-width:768px) {
-    .admin-nav {
+    .user-nav {
         width: 100%;
         padding: 0.5rem 0;
     }
 
-    .btn-menu {
+    .btn-menu-user {
         display: none;
     }
 
@@ -99,8 +94,14 @@
         width: 2.5rem;
     }
 
-    .item {
-        margin: 1rem;
+    .item-user {
+        margin: 1rem ;
+    }
+
+    .item-user:hover {
+        transform: scale(1.2);
+        transition: transform;
+        color: var(--green);
     }
 
     .items {
@@ -110,8 +111,11 @@
         position: absolute;
         top: 0;
     }
-
-    .line-nav {
+.item-user:hover {
+    transform: scale(1.2);
+    transition: transform;
+}
+    .line-nav-user{
         display: none;
     }
 

@@ -62,9 +62,6 @@ transition: .3s ease all;
     opacity: 0;
     pointer-events: auto;
 }
-&[type="date"]:placeholder{
-color: red;
-}
 
 ${props => props.valido === 'true' && css`
     border: 0.5px solid var(--white);
@@ -175,5 +172,5 @@ export {
     ButtonContainer,
     SaveButton,
     SuccessMessage,
-    ErrorMessage
+    ErrorMessage,
 }

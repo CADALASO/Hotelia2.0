@@ -1,22 +1,22 @@
 import React from 'react'
-import '../assets/css/Perfil_Admin.css'
-import Admin_NavBar from '../components/Dashboards/Admin_NavBar'
-import Contact_dataAdmin from '../components/Dashboards/Perfil/Contact_DataAdmin';
-import Iden_dataAdmin from '../components/Dashboards/Perfil/Identification_DataAdmin';
-import Personal_dataAdmin from '../components/Dashboards/Perfil/Personal_DataAdmin';
-import Security_dataAdmin from '../components/Dashboards/Perfil/Security _DataAdmin';
+import '../assets/css/PerfilAdmin.css'
+import AdminNavBar from '../components/Dashboards/AdminNavBar'
+import ContactDataAdmin from '../components/Dashboards/Perfil/admin/ContactDataAdmin';
+import IdenDataAdmin from '../components/Dashboards/Perfil/admin/IdentificationDataAdmin';
+import PersonalDataAdmin from '../components/Dashboards/Perfil/admin/PersonalDataAdmin';
+import SecurityDataAdmin from '../components/Dashboards/Perfil/admin/SecurityDataAdmin';
 import Footer from '../components/INICIO/Footer'
 
 function Admin_Perfil() {
     return (
         <div>
-            <Admin_NavBar />
+            <AdminNavBar />
             <div className='container-perfil'>
-                <Iden_dataAdmin />
+                <IdenDataAdmin />
                 <div className='container-data'>
-                    <Personal_dataAdmin />
-                    <Contact_dataAdmin />
-                    <Security_dataAdmin />
+                    <PersonalDataAdmin />
+                    <ContactDataAdmin />
+                    <SecurityDataAdmin />
                 </div>
             </div>
             <Footer />

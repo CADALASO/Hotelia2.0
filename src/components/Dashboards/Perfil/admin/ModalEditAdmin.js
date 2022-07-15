@@ -1,7 +1,7 @@
 import React from "react";
-import { Overlay, ContainerModal, HeaderModal, ButtonClose, BodyModal } from "../../../../assets/elements/Modal_Edit";
+import { Overlay, ContainerModal, HeaderModal, ButtonClose, BodyModal } from "../../../../assets/elements/ModalEdit";
 
-const Modal_EditAdmin = ({ children, status, changeStatus, positionModal }) => {
+const ModalEditAdmin = ({ children, status, changeStatus, positionModal }) => {
     return (
         <>
             {status &&
@@ -21,4 +21,4 @@ const Modal_EditAdmin = ({ children, status, changeStatus, positionModal }) => {
     );
 }
 
-export default Modal_EditAdmin; 
+export default ModalEditAdmin; 

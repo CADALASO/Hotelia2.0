@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Modal_EditAdmin from './Modal_EditAdmin';
-import '../../../../assets/css/Perfil_Admin.css'
+import ModalEditAdmin from './ModalEditAdmin';
+import '../../../../assets/css/PerfilAdmin.css'
 
-function Contact_dataAdmin() {
+function ContactDataAdmin() {
     const [statusModalCont, changeStatusModalCont] = useState(false);
 
     return (
@@ -24,7 +24,7 @@ function Contact_dataAdmin() {
             <div className='button-gray'>
             <button className='btn-edit gray'onClick={() => changeStatusModalCont(!statusModalCont)}>EDITAR</button>
             </div>
-            <Modal_EditAdmin
+            <ModalEditAdmin
                 status={statusModalCont}
                 changeStatus={changeStatusModalCont}
                 positionModal={'start'}
@@ -45,10 +45,10 @@ function Contact_dataAdmin() {
                     />
                 </div>
                 <button>GUARDAR CAMBIOS</button>
-            </Modal_EditAdmin>
+            </ModalEditAdmin>
         </div>
 
     )
 }
 
-export default Contact_dataAdmin;
+export default ContactDataAdmin;

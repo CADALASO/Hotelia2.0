@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Modal_EditAdmin from './Modal_EditUser';
-import '../../../../assets/css/Perfil_Admin.css'
+import ModalEditAdmin from './ModalEditUser';
+import '../../../../assets/css/PerfilUser.css'
 
-function Security_dataAdmin() {
+function SecurityDataUser() {
     const [statusModalSeg, changeStatusModalSeg] = useState(false);
 
     return (
@@ -17,7 +17,7 @@ function Security_dataAdmin() {
             <div className='button-gray-u'>
                 <button className='btn-edit gray-u' onClick={() => changeStatusModalSeg(!statusModalSeg)}>EDITAR</button>
             </div>
-            <Modal_EditAdmin
+            <ModalEditAdmin
                 status={statusModalSeg}
                 changeStatus={changeStatusModalSeg}
                 positionModal={'start'}
@@ -42,10 +42,10 @@ function Security_dataAdmin() {
                     />
                 </div>
                 <button>GUARDAR CAMBIOS</button>
-            </Modal_EditAdmin>
+            </ModalEditAdmin>
         </div>
 
     )
 }
 
-export default Security_dataAdmin;
+export default SecurityDataUser;

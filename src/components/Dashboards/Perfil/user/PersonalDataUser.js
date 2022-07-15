@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../../assets/css/Perfil_User.css'
-function Personal_dataAdmin() {
+import '../../../../assets/css/PerfilUser.css'
+function PersonalDataUser() {
     return (
         <div>
             <div className='container-color-u align-u'>
@@ -29,4 +29,4 @@ function Personal_dataAdmin() {
     )
 }
 
-export default Personal_dataAdmin;
+export default PersonalDataUser;

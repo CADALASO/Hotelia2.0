@@ -6,13 +6,14 @@ import Footer from '../components/Footer/Footer'
 import Nevera from '../assets/img/iconos/nevera.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle} from '@fortawesome/free-solid-svg-icons'
+import AdminNavBar from '../components/Dashboards/AdminNavBar'
 
 function FormHab() {
     
     
     return (
         <div>
-            <div className='nav-bar-list'>Header</div>
+            <AdminNavBar/>
 
             <div className='container-form-habs'>
                 <h1>CREAR HABITACIÓN</h1>

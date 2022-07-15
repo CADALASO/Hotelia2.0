@@ -1,45 +1,52 @@
 import React from 'react'
-import User_NavBar from '../components/Dashboards/User_NavBar'
-import photo_User from '../assets/img/perfilUSER.png';
-import '../assets/css/Dashboard_User.css';
+import UserNavBar from '../components/Dashboards/UserNavBar'
+import photoUser from '../assets/img/perfilUSER.png';
+import '../assets/css/DashboardUser.css';
 import { Link } from 'react-router-dom';
-import dark_door from '../assets/img/iconos/dark-door.svg';
-import imagotype_dark from '../assets/img/imagotype-dark.png';
+import darkDoor from '../assets/img/iconos/dark-door.svg';
+import imagotypeDark from '../assets/img/imagotype-dark.png';
 import Footer from '../components/INICIO/Footer';
 
 
-function User_Dashboard() {
+function UserDashboard() {
     return (
         <div>
             <div className='background'>
-                <User_NavBar />
+                <div className='ocultar'>
+                    <UserNavBar />
+                </div>
                 <div className='group-header-user'>
                     <div className='imagotype'>
-                        <img src={imagotype_dark} alt="imagotype" className='imagotype-dark' />
+                        <img src={imagotypeDark} alt="imagotype" className='imagotype-dark' />
                     </div>
-                    <div className='btn-salir-dashboard'>
-                        <Link to="/"><img src={dark_door} alt="door" /> Salir</Link>
+                    <div className='btn-salir-dashboard-user'>
+                        <Link to="/Hotelia/Login"><img src={darkDoor} alt="door" /> Salir</Link>
                     </div>
                 </div>
+
                 <div className='group-welcome'>
                     <h3 className='welcome-title'>Bienvenido, Usuario</h3>
-                    <img src={photo_User} alt="photo User" className='photo-Dashboard' />
+                    <img src={photoUser} alt="photoUser" className='photo-Dashboard' />
                 </div>
+
                 <div className='group-menu-user'>
                     <div>
-                        <Link to="/" className="group-item"><i class="fa-solid fa-magnifying-glass"></i> HABITACIONES</Link>
+                        <Link to="/Hotelia/User/list-habitaciones" className="group-item"><i class="fa-solid fa-magnifying-glass"></i> HABITACIONES</Link>
                     </div>
                     <div className='border'>
-                        <Link to="/" className="group-item"><i class="fa-solid fa-calendar-check"></i> MIS RESERVAS</Link>
+                        <Link to="/Hotelia/User/Reservas" className="group-item"><i class="fa-solid fa-calendar-check"></i> MIS RESERVAS</Link>
                     </div>
                     <div>
-                        <Link to="/" className="group-item"><i class="fa-solid fa-user-pen"></i> PERFIL</Link>
+                        <Link to="/Hotelia/User/Perfil" className="group-item"><i class="fa-solid fa-user-pen"></i>MI PERFIL</Link>
                     </div>
                 </div>
+
             </div>
-            <Footer/>
+
+            <Footer />
+
         </div>
     )
 }
 
-export default User_Dashboard;
+export default UserDashboard;

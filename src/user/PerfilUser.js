@@ -1,22 +1,22 @@
 import React from 'react'
-import '../assets/css/Perfil_User.css'
-import User_NavBar from '../components/Dashboards/User_NavBar';
-import Contact_dataUser from '../components/Dashboards/Perfil/user/Contact_DataUser';
-import Iden_dataUser from '../components/Dashboards/Perfil/user/Identification_DataUser';
-import Personal_dataUser from '../components/Dashboards/Perfil/user/Personal_DataUser';
-import Security_dataUser from '../components/Dashboards/Perfil/user/Security _DataUser';
+import '../assets/css/PerfilUser.css'
+import UserNavBar from '../components/Dashboards/UserNavBar';
+import ContactDataUser from '../components/Dashboards/Perfil/user/ContactDataUser';
+import IdenDataUser from '../components/Dashboards/Perfil/user/IdentificationDataUser';
+import PersonalDataUser from '../components/Dashboards/Perfil/user/PersonalDataUser';
+import SecurityDataUser from '../components/Dashboards/Perfil/user/SecurityDataUser';
 import Footer from '../components/INICIO/Footer'
 
-function User_Perfil() {
+function UserPerfil() {
     return (
         <div>
-            <User_NavBar/>
+            <UserNavBar/>
             <div className='container-perfil-u'>
-                <Iden_dataUser />
+                <IdenDataUser />
                 <div className='container-data-u'>
-                    <Personal_dataUser />
-                    <Contact_dataUser />
-                    <Security_dataUser />
+                    <PersonalDataUser />
+                    <ContactDataUser />
+                    <SecurityDataUser />
                 </div>
             </div>
             <Footer />
@@ -24,4 +24,4 @@ function User_Perfil() {
     )
 }
 
-export default User_Perfil;
+export default UserPerfil;

@@ -1,12 +1,12 @@
 
 import React from 'react';
-import '../../assets/css/Admin_NavBar.css';
+import '../../assets/css/AdminNavBar.css';
 import { Link } from 'react-router-dom';
 import isotype from '../../assets/img/white-isotype.png';
 import door from '../../assets/img/iconos/Door.svg';
-import photo_Admin from '../../assets/img/perfilADMIN.png';
+import photoAdmin from '../../assets/img/perfilADMIN.png';
 
-function Admin_NavBar() {
+function AdminNavBar() {
   return (
 
     <nav className='admin-nav'>
@@ -20,23 +20,23 @@ function Admin_NavBar() {
         </div>
         <div className='group-photo'>
           <div>
-            <img src={photo_Admin} alt="photo Admin" className='photo' />
+            <img src={photoAdmin} alt="photoAdmin" className='photo' />
           </div>
           <div className="btn-salir">
-            <Link to="/"><img src={door} alt="door" /> Salir</Link>
+            <Link to="/Hotelia/Login"><img src={door} alt="door" /> Salir</Link>
           </div>
         </div>
       </div>
       <div className="items">
-        <Link to="/" className="item"><i class="fa-solid fa-bed"></i> HABITACIONES</Link>
+        <Link to="/Hotelia/Admin/list-habitaciones" className="item"><i class="fa-solid fa-bed"></i> HABITACIONES</Link>
         <hr className="line-nav" />
-        <Link to="/" className="item"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
+        <Link to="/Hotelia/Admin/form-habitaciones" className="item"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
         <hr className="line-nav" />
-        <Link to="/" className="item"><i class="fa-solid fa-user-pen"></i> PERFIL</Link>
+        <Link to="/Hotelia/Admin/Perfil" className="item"><i class="fa-solid fa-user-pen"></i> MI PERFIL</Link>
       </div>
     </nav >
 
   )
 }
 
-export default Admin_NavBar;
+export default AdminNavBar;

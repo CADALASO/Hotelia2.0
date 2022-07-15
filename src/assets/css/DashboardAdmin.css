@@ -11,7 +11,7 @@
     font-family:'Biko';
     color: var(--white);
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     padding: 2rem 1rem 0 0;
 }
 
@@ -25,14 +25,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin: 1rem 3rem;
     padding: 0.5rem 1rem;
     color: var(--white);
 }
 
+.group-item-admin:hover{
+    transform: scale(1.2);
+    transition: transform;
+    color: var(--blue);
+}
+
 .group-item-admin i{
-    margin-bottom:1rem;
-    font-size: 40px;
+    margin-bottom:.5rem;
+    font-size: 32px;
 }
 
 .group-menu-admin{
@@ -41,7 +47,7 @@
     align-items: center;
     font-family:'Akrobat';
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     padding: 0 0 1rem 0;
 }
 
@@ -78,31 +84,35 @@
     }
 
     .btn-salir-dashboard-admin{
-        padding: 2rem 2rem 0 0;
+        padding: 1rem 2rem 0 0;
+    }
+
+    .btn-salir-dashboard-admin img{
+        position: relative;
+        top: 0.3rem;
     }
 
     .group-menu-admin{
         flex-direction: row;
         justify-content: center;
-        padding: 0 0 1rem 0;
+        padding: 0 0 2rem 0;
         margin-top: 2rem;
-        padding-bottom: 5rem;
         position: relative;
-        right: 1rem;
+        right: 1.5rem;
     }
 
     .imagotype{
-        padding: 2rem 0 0 2rem;
+        padding: 1rem 0 0 2rem;
     }
 
     .photo-Dashboard-admin {
         width: 12rem;
-        margin-top: 3rem;
+        margin-top: .5rem;
     }
 
     .welcome-title-admin {
         font-size: 24px;
-        margin-top: 4rem;
+        margin-top: 2rem;
 
     }
 }

@@ -2,11 +2,11 @@
     background-color: var(--gray);
 }
 
-.btn-salir-dashboard-admin{
+.btn-salir-dashboard-user{
     font-family:'Biko';
-    color: var(--white);
+    color: var(--dark);
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 2rem 2rem 0 0;
 }
 
@@ -47,12 +47,18 @@
 
     }
 
-    .btn-salir-dashboard{
+    .btn-salir-dashboard-user{
         font-family:'Biko';
         color: var(--dark);
         display: flex;
-        justify-content: end;
-        padding: 2rem 2rem 0 0;
+        justify-content: flex-end;
+        padding: 0.5rem 2rem 0 0;
+    }
+
+    .btn-salir-dashboard-user img{
+        height: 2rem;
+        position: relative;
+        top: 0.3rem;
     }
 
     .group-header-user{
@@ -65,13 +71,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 1rem;
+        margin: 1rem 2rem;
         padding: 0.5rem 1rem;
         color: var(--dark);
     }
+    .group-item:hover{
+        transform: scale(1.2);
+        transition: transform;
+        color: var(--green);
+    }
 
     .group-item i{
-        margin-bottom:1rem ;
+        margin-bottom:.5rem ;
     }
 
     .group-menu-user{
@@ -80,13 +91,13 @@
         justify-content: center;
         font-family:'Akrobat';
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
         padding: 0 0 1rem 0;
         position: relative;
-        right: 1rem;
+        right: 2rem;
     }
 
-    .hidden {
+    .hidden, .ocultar {
         display: none;
     }
 
@@ -101,4 +112,5 @@
     .welcome-title {
         font-size: 28px;
     }
+
 }

@@ -4,7 +4,7 @@ import {
     GroupInput,
     Input,
     ErrorLegend,
-    ValidationIcon} from '../../assets/elements/Registration_Form';
+    ValidationIcon} from '../../assets/elements/RegistrationForm';
 import { faCheckCircle,faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 const LogInput = ({ estado, cambiarEstado, type, label, placeholder, errorLegend, name, regularPhrase }) => {
     const onChange = (e) => {

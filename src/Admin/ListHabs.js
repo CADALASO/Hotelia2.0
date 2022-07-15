@@ -1,17 +1,18 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import ImageCardSlide from '../components/INICIO/ImageCardSlide';
 import { api } from '../utils/peticiones';
 import Nevera from '../assets/img/iconos/nevera.png'
 import Footer from '../components/Footer/Footer';
 
 
-import ModalEdit from '../Admin/Modal'
+import ModalEdit from './Modal'
 
 import '../assets/css/ListHabs.css'
+import AdminNavBar from '../components/Dashboards/AdminNavBar';
 function ListHabs() {
     const [modal, setModal] = useState(false);
-    const [habitacion, setHabitacion] = useState({})
+    const [habitacion, setHabitacion] = useState({});
 
     const [habitaciones, setHabitaciones] = useState([]);
     useEffect(() => {
@@ -23,7 +24,7 @@ function ListHabs() {
     }, [])
     return (
         <div>
-            <div className='nav-bar-list'>Header</div>
+            <AdminNavBar />
 
             <div className='container-list-habs'>
                 <h1>HABITACIONES</h1>
@@ -65,7 +66,6 @@ function ListHabs() {
                                                         <p>{habitaciones.descripcion}</p>
                                                         <h2>{habitaciones.precio}</h2>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@ function ListHabs() {
 
 
                 </div>
-                
+
 
             </div>
 

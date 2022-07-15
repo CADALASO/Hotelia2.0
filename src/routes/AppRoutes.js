@@ -1,29 +1,26 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import FormHab from '../Admin/FormHab'
-import ListHabs from '../Admin/ListHabs'
-
-import Admin_Dashboard from '../admin/Dashboard'
-import Admin_Perfil from '../admin/PerfilAdmin'
+import FormHab from '../admin/FormHab'
+import ListHabs from '../admin/ListHabs'
+import AdminDashboard from '../admin/AdminDashboard'
+import AdminPerfil from '../admin/PerfilAdmin'
 import Form from '../registrationForm/Form'
 import Inicio from '../pages/Inicio'
-import User_Dashboard from '../user/Dashboard'
-import User_Perfil from '../user/PerfilUser'
+import UserDashboard from '../user/UserDashboard'
+import UserPerfil from '../user/PerfilUser'
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/Hotelia/' element={<Inicio />} ></Route>
-
-
-        <Route path='/Hotelia/list-habitaciones' element={<ListHabs />} ></Route>
-        <Route path='/Hotelia/form-habitaciones' element={<FormHab />} ></Route>
-        <Route path='/Admin-Dashboard' element={<Admin_Dashboard />}></Route>
-        <Route path='/User-Dashboard' element={<User_Dashboard />}></Route>
-        <Route path='/Formulario' element={<Form />}></Route>
-        <Route path='/Admin-Perfil' element={<Admin_Perfil />}></Route>
-        <Route path='/User-Perfil' element={<User_Perfil />}></Route>
+        <Route path='/Hotelia/Admin/list-habitaciones' element={<ListHabs />} ></Route>
+        <Route path='/Hotelia/Admin/form-habitaciones' element={<FormHab/>} ></Route>
+        <Route path='/Hotelia/Admin/Dashboard' element={<AdminDashboard />}></Route>
+        <Route path='/Hotelia/User/Dashboard' element={<UserDashboard />}></Route>
+        <Route path='/Hotelia/Formulario/Registro' element={<Form />}></Route>
+        <Route path='/Hotelia/Admin/Perfil' element={<AdminPerfil />}></Route>
+        <Route path='/Hotelia/User/Perfil' element={<UserPerfil />}></Route>
       </Routes>
     </BrowserRouter>
   )

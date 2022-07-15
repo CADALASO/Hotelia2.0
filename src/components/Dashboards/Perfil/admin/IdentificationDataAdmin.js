@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import photo_Admin from '../../../../assets/img/perfilADMIN.png';
-import Modal_EditAdmin from './Modal_EditAdmin';
+import Modal_EditAdmin from './ModalEditAdmin';
 
 function Iden_dataAdmin() {
 
