@@ -90,7 +90,7 @@ function CardSlide() {
             <Slider {...settings}>
                 {
                     habitaciones?.map(habitaciones => (
-                        <div class="container">
+                        <div className="container">
                             <div className="image-card-slide">
                                 <ImageCardSlide carousel={habitaciones.fotos} />
                             </div>
@@ -99,13 +99,13 @@ function CardSlide() {
                                 <Link to='#'><button className="reservar-cards">RESERVAR</button></Link>
                             </div>
                             
-                            <div class="card">
+                            <div className="card">
                                 
                                 
                                 {/*  ---------- CARD PARTE delantera ---------- */}
-                                <div class="card__1">
+                                <div className="card__1">
 
-                                    <div class="content__1">
+                                    <div className="content__1">
                                         <div className="cards" id='habitacion'>
                                             <div className="card__1">
                                                 <h1>{habitaciones.habitacion}</h1>

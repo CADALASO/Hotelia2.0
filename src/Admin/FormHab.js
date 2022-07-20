@@ -6,8 +6,6 @@ import Swal from 'sweetalert2'
 import '../assets/css/FormHab.css'
 import Footer from '../components/Footer/Footer'
 import Nevera from '../assets/img/iconos/nevera.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 function FormHab() {
     const history = useNavigate();
@@ -16,16 +14,25 @@ function FormHab() {
     en él y controlarlos */
     const [data, setData] = useState({
         id: "",
-        producto: "",
+        nohab: "",
+        habitacion: "",
+        cappersonas: "",
         precio: "",
-        foto: "",
-        slider: "",
+        nocamas: "",
         descripcion: "",
-        caracteristicas: ""
+        fotos: "",
+        cajasfuertes:"",
+        safeselection: false,
+        tv: "",
+        wifi: "",
+        nevera: "",
+        baño: ""
     })
     /*2. Se usa la función handleChange para que cada vez que haya un cambio en el input
     guarde el name y el value del mismo */
     const handleChange = ({ target }) => {
+        console.log(target.value)
+
         //Cada vez que haya un cambio se va a guardar el valor en el estado data
         setData({
             ...data,
@@ -36,7 +43,7 @@ function FormHab() {
     /*4. Crear petición asíncrona*/
     const url = "https://crud-hotelia.herokuapp.com/habitaciones/";
 
-    /*3. funci{on para procesar el envío del formulario*/
+    /*3. funcion para procesar el envío del formulario*/
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await axios.post(url, data);//await espera hasta que se ejcute la petición
@@ -45,7 +52,7 @@ function FormHab() {
 
             Swal.fire(
                 'Guardado!',
-                `El producto <strong> ${response.data.producto}</strong> ha sido guardado exitosamente!`,
+                `La habitación <strong> ${response.data.habitacion}</strong> ha sido guardado exitosamente!`,
                 'success'
             )
             history.push("/");
@@ -53,11 +60,13 @@ function FormHab() {
         } else {
             Swal.fire(
                 'Error!',
-                'Hubo un problema al registrar el producto!',
+                'Hubo un problema al registrar la habitación!',
                 'error'
             )
         }
     }
+
+    
 
 
     return (
@@ -67,20 +76,33 @@ function FormHab() {
             <div className='container-form-habs'>
                 <h1>CREAR HABITACIÓN</h1>
 
-                <form id='formulario' >
+                <form id='formulario' onSubmit={handleSubmit}>
 
                     <div className='line1-habitacion'>
                         <div className='flex-form' id='grupo__nohab'>
                             <label className='formulario__label'>No. de Hab:</label>
-                            {/* <i class="fa-solid fa-xmark"></i> */}
-                            <input className='no-hab' type='number' name='numerohab' />
+                            
+                            <input 
+                                className='no-hab' 
+                                placeholder="Ingrese el número de la habitación"
+                                type='number' 
+                                name='nohab' 
+                                value={data.nohab}
+                                onChange={handleChange}
+                                />
 
                         </div>
 
                         <div className='flex-form nombrehab'>
                             <label className='formulario__label'>Nombre de Habitación:</label>
-                            {/* <i class="fa-solid fa-xmark"></i> */}
-                            <input className='no-hab' type='text' name='nombrehab' />
+                            <input 
+                                placeholder="Ej: President's Suite"
+                                className='no-hab' 
+                                type='text' 
+                                name='habitacion'
+                                value={data.habitacion}
+                                onChange={handleChange} 
+                                />
 
                         </div>
                     </div>
@@ -88,15 +110,32 @@ function FormHab() {
                     <div className='line2-habitacion'>
                         <div className='flex-form'>
                             <label className='formulario__label'>Capacidad de Personas:</label>
-                            <input type='number' name='cappersonas' />
+                            <input 
+                                type='number' 
+                                name='cappersonas' 
+                                value={data.cappersonas}
+                                onChange={handleChange} 
+                                />
                         </div>
                         <div className='flex-form'>
                             <label className='formulario__label'>Precio:</label>
-                            <input className='precio-form' type='number' name='precio' />
+                            <input 
+                                placeholder="Ej: 000000"
+                                className='precio-form' 
+                                type='number' 
+                                name='precio' 
+                                value={data.precio}
+                                onChange={handleChange} 
+                                />
                         </div>
                         <div className='flex-form'>
                             <label className='formulario__label'>No. de Camas:</label>
-                            <input type='number' name='numerocamas' />
+                            <input 
+                                type='number' 
+                                name='nocamas'
+                                value={data.nocamas}
+                                onChange={handleChange} 
+                                />
                         </div>
 
                     </div>
@@ -104,17 +143,35 @@ function FormHab() {
                     <div className='line3-habitacion'>
                         <div className='flex-form'>
                             <label className='formulario__label'>Descripción:</label>
-                            <textarea id="story" rows="5" cols="33" className='textarea' name='descripcion' />
+                            <textarea
+                                value={data.descripcion}
+                                onChange={handleChange} 
+                                placeholder="Ingrese la descripción de la habitación" 
+                                id="story" 
+                                rows="5" 
+                                cols="33" 
+                                className='textarea' 
+                                name='descripcion' />
                         </div>
 
                     </div>
 
                     <div className='line4-habitacion'>
-                        <div className='flex-form'>
-                            <label className='formulario__label'>Fotos:</label>
-                            <input type='text' name='fotos' />
-                            <input type='text' />
-                            <input type='text' />
+                        <div className='flex-form  file-select-form'>
+                            <label>Fotos:</label>
+                            <div className='flex-select-form'>
+                                <input 
+                                    value={data.fotos}
+                                    onChange={handleChange} 
+                                    className='fotos-edit-form' 
+                                    type='file' />
+                                <div className='botones-fotos-form'>
+                                    <button className='yes-foto-form'><i className="fa-solid fa-plus"></i></button>
+                                    <button className='delete-foto-form'><i className="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </div>
+
+
                         </div>
 
                     </div>
@@ -125,28 +182,38 @@ function FormHab() {
                             <div className='flex-si-no'>
                                 <div className='line1-selector'>
                                     <div className='flex-form-selector'>
-                                        <p ><i className="fa-solid fa-vault"></i>Caja fuerte</p>
+                                        <p><i className="fa-solid fa-vault"></i>Caja fuerte</p>
                                         <div className='selectors-radio'>
-                                            <input type="radio" />
-                                            <label className='formulario__label' for="huey">Si</label>
+                                            <input 
+                                                type="radio" 
+                                                name="safeselection" 
+                                                onChange={handleChange} 
+                                                value={true}
+                                                />
+                                            <label className='formulario__label'>Si</label>
                                         </div>
 
                                         <div className='selectors-radio'>
-                                            <input type="radio" checked />
-                                            <label className='formulario__label' for="dewey">No</label>
+                                            <input 
+                                                type="radio" 
+                                                name="safeselection"
+                                                onChange={handleChange}
+                                                value={false}
+                                                />
+                                            <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
 
                                     <div className='flex-form-selector'>
                                         <p><i className="fa-solid fa-wifi"></i>WI-FI</p>
                                         <div className='selectors-radio'>
-                                            <input type="radio" />
-                                            <label className='formulario__label' for="huey">Si</label>
+                                            <input type="radio" name="wifi-selection"/>
+                                            <label className='formulario__label'>Si</label>
                                         </div>
 
                                         <div className='selectors-radio'>
-                                            <input type="radio" checked />
-                                            <label className='formulario__label' for="dewey">No</label>
+                                            <input type="radio" name="wifi-selection"/>
+                                            <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
                                 </div>
@@ -157,12 +224,12 @@ function FormHab() {
                                         <p>Nevera</p>
                                         <div className='selectors-radio'>
                                             <input type="radio" />
-                                            <label className='formulario__label' for="huey">Si</label>
+                                            <label className='formulario__label'>Si</label>
                                         </div>
 
                                         <div className='selectors-radio'>
-                                            <input type="radio" checked />
-                                            <label className='formulario__label' for="dewey">No</label>
+                                            <input type="radio" />
+                                            <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
 
@@ -170,12 +237,12 @@ function FormHab() {
                                         <p><i className="fa-solid fa-tv"></i>TV</p>
                                         <div className='selectors-radio'>
                                             <input type="radio" />
-                                            <label className='formulario__label' for="huey">Si</label>
+                                            <label className='formulario__label'>Si</label>
                                         </div>
 
                                         <div className='selectors-radio'>
-                                            <input type="radio" checked />
-                                            <label className='formulario__label' for="dewey">No</label>
+                                            <input type="radio" />
+                                            <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
                                 </div>
@@ -185,12 +252,12 @@ function FormHab() {
                                         <p><i className="fa-solid fa-bath"></i>Baño</p>
                                         <div className='selectors-radio'>
                                             <input type="radio" />
-                                            <label className='formulario__label' for="huey">Si</label>
+                                            <label className='formulario__label'>Si</label>
                                         </div>
 
                                         <div className='selectors-radio'>
-                                            <input type="radio" checked />
-                                            <label className='formulario__label' for="dewey">No</label>
+                                            <input type="radio" />
+                                            <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
                                 </div>

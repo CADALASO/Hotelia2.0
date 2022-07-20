@@ -32,7 +32,7 @@ function ListHabs() {
                     {
                         habitaciones?.map(habitaciones => (
                             <div className='flex-list-habs'>
-                                <div class="container-list">
+                                <div className="container-list">
                                     <div className="image-card-slide">
                                         <ImageCardSlide carousel={habitaciones.fotos} />
 
@@ -40,7 +40,7 @@ function ListHabs() {
 
                                     <div className="button-card-inicio-list">
                                         <div className='disponible'>
-                                            <button className="disponible-cards-list"><i class="fa-solid fa-circle"></i>DISPONIBLE</button>
+                                            <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button>
                                         </div>
 
                                         <button
@@ -55,10 +55,10 @@ function ListHabs() {
                                         }
                                     </div>
 
-                                    <div class="card-list">
+                                    <div className="card-list">
                                         {/*  ---------- CARD PARTE delantera ---------- */}
-                                        <div class="card__1-list">
-                                            <div class="content__1-list">
+                                        <div className="card__1-list">
+                                            <div className="content__1-list">
                                                 <div className="cards-list" id='habitacion'>
                                                     <div className="card__1">
                                                         <h1 className='list-h1'>{habitaciones.habitacion}</h1>
@@ -82,7 +82,7 @@ function ListHabs() {
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-vault"></i>
-                                                        <p>{habitaciones.cajasfuertes}</p>
+                                                        <p>{habitaciones.cajasfuertes?"Caja fuerte":"No"}</p>
                                                     </div>
                                                 </div>
 
