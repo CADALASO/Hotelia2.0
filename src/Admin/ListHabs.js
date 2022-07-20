@@ -57,13 +57,13 @@ function ListHabs() {
 
                                     <div className="card-list">
                                         {/*  ---------- CARD PARTE delantera ---------- */}
-                                        <div className="card__1-list">
+                                        <div className="card__1-list" key={habitaciones.id}>
                                             <div className="content__1-list">
                                                 <div className="cards-list" id='habitacion'>
                                                     <div className="card__1">
                                                         <h1 className='list-h1'>{habitaciones.habitacion}</h1>
                                                         <p>{habitaciones.descripcion}</p>
-                                                        <h2>{habitaciones.precio}</h2>
+                                                        <h2>{habitaciones.precio} COP / NOCHE</h2>
                                                     </div>
 
                                                 </div>
