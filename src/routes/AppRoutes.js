@@ -5,6 +5,7 @@ import ListHabs from '../Admin/ListHabs'
 
 
 import Inicio from '../pages/Inicio'
+import Login from '../pages/Login'
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
 
             <Route path='/Hotelia/list-habitaciones' element={<ListHabs/>} ></Route>
             <Route path='/Hotelia/form-habitaciones' element={<FormHab/>} ></Route>
+            <Route path='/Hotelia/login' element={<Login/>} ></Route>
         </Routes>
     </BrowserRouter>
   )

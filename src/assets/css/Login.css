@@ -1,0 +1,167 @@
+.bg-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-image: url(../img/login.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.volver-login button{
+    color: white;
+    background-color: transparent;
+    border: solid;
+    font-size: 40px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    border: none;
+}
+
+.volver-login i{
+    text-shadow: 2px 2px 2px rgba( 51, 51, 51, 0.8);
+}
+
+.formulario-login img{
+    width: 70%;
+}
+
+.formulario-login{
+    font-family: 'Akrobat';
+    background: rgba( 51, 51, 51, 0.8);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    color: white;
+    margin: 2rem auto;
+    padding: 2rem ;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 30vw;
+    border-radius: 10px;
+    height: 80%;
+    align-items: center;
+}
+
+.formulario-login h1{
+    margin-top: 1.5rem;
+}
+
+.formulario-login p{
+    margin-bottom: 1rem;
+}
+
+.form-login-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login-group label{
+    font-weight: 500;
+}
+
+.form-login-group input{
+    width: 25vw;
+    font-family: 'Biko';
+    font-size: 18px;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid white;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    margin: 0.5rem 0;
+}
+
+
+.formulario-login button{
+
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(43, 43, 43);
+    border: 2px solid white;
+    color: white;
+    font-family: 'Akrobat';
+    font-weight: 700;
+    font-size: 20px;
+    width: 30vw;
+    margin-top: 1rem;
+}
+
+.form-login-group label {
+    color: white;
+    font-weight: bold;
+}
+
+.botones-login{
+    display: flex;
+    flex-direction: column;
+}
+
+.error{
+    color: rgb(17, 17, 17);
+    text-align: right;
+    font-family: 'Biko';
+    font-weight: bolder;
+    /* text-shadow: 0px 0px 2px white; */
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .formulario-login{
+        width: 80vw;
+    }
+
+    .formulario-login h1{
+        font-size: 20px;
+    }
+
+    .formulario-login p{
+        text-align: center;
+    }
+
+    .formulario-login img{
+        width: 20vw;
+    }
+
+    .form-login-group input{
+        width: 60vw;
+    }
+
+    .botones-login{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .formulario-login{
+        text-align: center;
+    }
+    .formulario-login img{
+        width:15vw;
+    }
+
+    .formulario-login h1{
+        font-size: 15px;
+    }
+
+    .formulario-login p{
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .formulario-login{
+        text-align: center;
+    }
+}
