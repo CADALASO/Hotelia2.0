@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
     //admin@gmail.com
-    //virtuosa12@
+    //adminhl12
     return (
         <div className='bg-login'>
             
@@ -20,8 +20,10 @@ const Login = () => {
                 validate={(valores) => {
                     let errores = {}
                     //VALIDACIÓN CORREO Y CONTRASEÑA DEL ADMIN
-                    if (valores.email === 'admin@gmail.com' && valores.contraseña === 'virtuosa12') {
+                    if (valores.email === 'admin@hotelia.com' && valores.contraseña === 'adminhl12') {
                         window.location = "/Hotelia/list-habitaciones"
+                    }if(valores.email === 'jfajardo@hotelia.com' && valores.contraseña === 'userhl12'){
+                        window.location = "/Hotelia/"
                     }
                     //VALIDACIÓN CORREO
                     if (!valores.email) {
