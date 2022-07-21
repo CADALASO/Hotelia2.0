@@ -1,27 +1,22 @@
+import React, { useState } from 'react';
+
 import '../assets/css/FormReg.css';
-import imagotype_white from '../assets/img/imagotype-white.png';
-import {
-    Label,
-    RegistrationForm,
-    ButtonContainer,
-    SaveButton,
-    SuccessMessage,
-    ErrorMessage
-} from '../assets/elements/RegistrationForm';
+
+import imagotypeWhite from '../assets/img/imagotype-white.png';
+
+import { Label, RegistrationForm, ButtonContainer, SaveButton, SuccessMessage, ErrorMessage, Select, MenuItem, GroupInput } from '../assets/elements/RegistrationForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import Input from '../components/registrationForm/Input';
-import React, { useState } from 'react';
-import { Select, MenuItem } from "@mui/material";
 import countryArr from '../components/registrationForm/CountrySelect';
-
-
+import TipoDoc from '../components/registrationForm/TipoDocSelect';
+import Genero from '../components/registrationForm/GeneroSelect';
+import { Link } from 'react-router-dom';
 
 const Form = () => {
-
     const [selectedCountry, setSelectedCountry] = useState("");
-
     const selectCountryHandler = (value) => setSelectedCountry(value);
+
     const [nombre, cambiarNombre] = useState({ campo: "", valido: null });
     const [apellido, cambiarApellido] = useState({ campo: "", valido: null });
     const [numDocumento, cambiarNumDocumento] = useState({ campo: "", valido: null });
@@ -57,13 +52,16 @@ const Form = () => {
         }
     }
 
+
     return (
         <main className='containerForm'>
-            <i class="fa-solid fa-circle-arrow-left"></i>
+            <div className='ReturnContainer'>
+                <Link to="/Hotelia/Login"> <i class="fa-solid fa-circle-arrow-left return"></i></Link>
+            </div>
             <RegistrationForm action='' onSubmit={onSubmit}>
                 <div className='headerForm'>
-                    <img src={imagotype_white} alt="imagotype_white" />
-                    <i class="fa-solid fa-circle-arrow-left"></i>
+                    <img src={imagotypeWhite} alt="imagotypeWhite" />
+                    <Link to="/Hotelia/Login"><i class="fa-solid fa-circle-arrow-left"></i></Link>
                 </div>
                 <h1 className='title-Form'>COMPLETA TUS DATOS</h1>
                 <div className='container-elderly'>
@@ -72,80 +70,98 @@ const Form = () => {
                             <i class="fa-solid fa-camera"></i>
                             <p>Agregar Foto</p>
                         </div>
+                        <div className='container-inputs'>
+                            <Input
+                                estado={nombre}
+                                cambiarEstado={cambiarNombre}
+                                type="text"
+                                name="nombre"
+                                label="Nombre(s)"
+                                placeholder="Karen Lucia"
+                                errorLegend="El nombre solo puede contener letras y espacios."
+                                regularPhrase={expressions.nombre} />
+                            <Input
+                                estado={apellido}
+                                cambiarEstado={cambiarApellido}
+                                type="text"
+                                name="apellido"
+                                label="Apellido(s)"
+                                placeholder="Lopez Perez"
+                                errorLegend="El apellido solo puede contener letras y espacios."
+                                regularPhrase={expressions.nombre} />
+                            <TipoDoc />
+                            <Input
+                                estado={numDocumento}
+                                cambiarEstado={cambiarNumDocumento}
+                                type="text"
+                                name="numdoc"
+                                label="Número de documento"
+                                placeholder="1234567890"
+                                errorLegend="El número de documento solo puede contener números, mínimo 5 y máximo son 1O dígitos. "
+                                regularPhrase={expressions.numdoc} />
+                        </div>
+                    </div>
+                    <div className='input-email'>
+                        <Input
+                            estado={correo}
+                            cambiarEstado={cambiarCorreo}
+                            type="email"
+                            name="correo"
+                            label="Correo Electrónico"
+                            placeholder="correo@dominio.com"
+                            errorLegend="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
+                            regularPhrase={expressions.correo} />
+                    </div>
+                    <div className='container-elderly '>
+                        <div className='group-input'>
+                            <div className='w-input m'>
+                                <Input
+                                    estado={fecha}
+                                    cambiarEstado={cambiarFecha}
+                                    type="date"
+                                    name="fechaN"
+                                    label="Fecha de nacimiento"
+                                    errorLegend="Ingresa tu fecha de nacimiento."
+                                />
+                            </div>
+                            <div className='w-input'>
+                                <Genero />
+                            </div>
+                        </div>
+                        <div className='group-input'>
+                            <div className='w-input m'>
+                                <GroupInput>
+                                    <Label>País de origen</Label>
+                                    <div>
+                                        <Select
+                                            value={selectedCountry}
+                                            onChange={(e) => selectCountryHandler(e.target.value)}
+                                        >
+                                            <MenuItem>Selecciona una opción</MenuItem>
+                                            {!!countryArr?.length &&
+                                                countryArr.map(({ label, value }) => (
+                                                    <MenuItem key={value} value={value} >
+                                                        {label}
+                                                    </MenuItem>
+                                                ))}
+                                        </Select>
+                                    </div>
+                                </GroupInput>
+                            </div>
+                            <div className='w-input'>
+                                <Input
+                                    estado={telefono}
+                                    cambiarEstado={cambiarTelefono}
+                                    type="text"
+                                    name="telefono"
+                                    label="Teléfono de contacto"
+                                    placeholder="1234567"
+                                    errorLegend="El teléfono solo puede contener números, mínimo 7 y máximo son 14 dígitos."
+                                    regularPhrase={expressions.telefono} />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <Input
-                    estado={nombre}
-                    cambiarEstado={cambiarNombre}
-                    type="text"
-                    name="nombre"
-                    label="Nombre(s)"
-                    placeholder="Carol Daniela"
-                    errorLegend="El nombre solo puede contener letras y espacios."
-                    regularPhrase={expressions.nombre} />
-                <Input
-                    estado={apellido}
-                    cambiarEstado={cambiarApellido}
-                    type="text"
-                    name="apellido"
-                    label="Apellido(s)"
-                    placeholder="Garcia Cerrato"
-                    errorLegend="El apellido solo puede contener letras y espacios."
-                    regularPhrase={expressions.nombre} />
-                <Input
-                    estado={numDocumento}
-                    cambiarEstado={cambiarNumDocumento}
-                    type="text"
-                    name="numdoc"
-                    label="Número de documento"
-                    placeholder="1234567890"
-                    errorLegend="El número de documento solo puede contener números, mínimo 5 y máximo son 1O dígitos. "
-                    regularPhrase={expressions.numdoc} />
-                <Input
-                    estado={correo}
-                    cambiarEstado={cambiarCorreo}
-                    type="email"
-                    name="correo"
-                    label="Correo Electrónico"
-                    placeholder="correo@dominio.com"
-                    errorLegend="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
-                    regularPhrase={expressions.correo} />
-                <Input
-                    estado={fecha}
-                    cambiarEstado={cambiarFecha}
-                    type="date"
-                    name="fecha"
-                    label="Fecha de nacimiento"
-                    errorLegend="Ingresa tu fecha de nacimiento."
-                />
-                <div>
-                    <Label>País de origen</Label>
-                    <div>
-                        <Select
-                            value={selectedCountry}
-                            onChange={(e) => selectCountryHandler(e.target.value)}
-                        >
-                            {!!countryArr?.length &&
-                                countryArr.map(({ label, value }) => (
-                                    <MenuItem key={value} value={value} >
-                                        {label}
-                                    </MenuItem>
-                                ))}
-                        </Select>
-                    </div>
-                </div>
-                <Input
-                    estado={telefono}
-                    cambiarEstado={cambiarTelefono}
-                    type="text"
-                    name="telefono"
-                    label="Teléfono de contacto"
-                    placeholder="1234567"
-                    errorLegend="El teléfono solo puede contener números, mínimo 7 y máximo son 14 dígitos."
-                    regularPhrase={expressions.telefono} />
-
-
-
                 {validForm === false && <ErrorMessage>
                     <p>
                         <FontAwesomeIcon icon={faExclamationTriangle} />

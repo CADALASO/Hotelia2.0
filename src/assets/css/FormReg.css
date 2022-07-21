@@ -1,8 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container-elderly {
+    display: flex;
+    flex-direction: column;
+}
+
 .containerForm {
     background-image: url(../img/fondoLOGIN.png);
     background-size: cover;
-    padding: 4rem 0;
+    padding: 2rem 0;
     width: 100%;
+}
+
+.container-inputs {
+    width: 100%;
+    margin: auto;
 }
 
 .container-photo {
@@ -34,69 +52,57 @@
 
 .headerForm img {
     width: 200px;
-    margin: -2rem 0 2rem 0;
+    margin: 1rem 0;
 }
 
 .headerForm i {
     margin: 1rem 0;
     font-size: 30px;
     color: var(--white);
-    position: relative;
-    bottom: 5rem;
-    left: 8.5rem;
     text-shadow: 1px 1px 1px var(--black);
+    display: none;
 }
 
-.Select {
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    background-color: rgba(51, 51, 51, 0);
-    border: 0.5px solid var(--white);
-    padding: 0 40px 0 10px;
-    border-radius: 3px;
+.return {
+    font-size: 30px;
     color: var(--white);
-    font-family: 'Biko';
-    transition: .3s ease all;
+    text-shadow: 1px 1px 1px var(--black);
+    margin: 0 2.5rem 1rem 0;
 }
 
-.css-1yk1gt9, .MuiInputBase-root, .MuiOutlinedInput-root, .MuiSelect-root {
-    font-family: 'biko';
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.4375em;
-    letter-spacing: 0.00938em;
-    color: rgba(0, 0, 0, 0.87);
-    box-sizing: border-box;
-    position: relative;
-    cursor: text;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    border-radius: 4px;
-}
-
-.select:focus{
-    border: 2px solid var(--white);
-    outline: none;
-    box-shadow: 3px 0px 30px rgba(163,163,163,.4)
+.ReturnContainer {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .title-Form {
     font-family: 'Akrobat';
     color: var(--white);
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
-
 @media screen and (min-width:768px) {
+
+    .container-inputs {
+        width: 60%;
+    }
+
+    .container-input-iden {
+        display: flex;
+    }
+
+    .container-photo {
+        width: 30%;
+        height: 240px;
+        margin-right: 2rem;
+    }
+
+    .group-input{
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .headerForm {
         flex-direction: row;
     }
@@ -107,29 +113,49 @@
     }
 
     .headerForm i {
+        display: flex;
         margin: 1rem 2rem;
         bottom: 0;
         left: 0;
     }
 
-    .container-photo {
-        width: 30%;
-        height: 255px;
+    .input-email {
+        width: 97%;
+        margin: 0 auto;
     }
 
+    .ReturnContainer {
+        display: none;
+    }
+
+    .w-input {
+        width: 97%;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width:1024px) {
-    .form {
-        width: 80%;
+
+    .group-input{
+        display: flex;
+        width: 95.5%;
     }
 
     .headerForm img {
         width: 150px;
-        margin: 1rem 0 0 2rem;
+        margin: 1rem 1rem 0 1rem;
     }
 
     .headerForm i {
         margin: 1rem 2rem 0 0;
     }
+
+    .input-email {
+        width: 95.5%;
+    }
+
+    .m{
+        margin-right: 3rem;
+    }
+
 }

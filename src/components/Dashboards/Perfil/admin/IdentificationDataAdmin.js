@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import photo_Admin from '../../../../assets/img/perfilADMIN.png';
-import Modal_EditAdmin from './ModalEditAdmin';
+import photoAdmin from '../../../../assets/img/perfilADMIN.png';
+import ModalEditAdmin from './ModalEditAdmin';
 
-function Iden_dataAdmin() {
+function IdendataAdmin() {
 
     const [statusModalIden, changeStatusModalIden] = useState(false);
 
 
     return (
         <div className='container-iden'>
-            <img src={photo_Admin} alt="photo Admin" className='photoPerfil' />
+            <img src={photoAdmin} alt="photoAdmin" className='photoPerfil' />
             <div className='container-text'>
                 <h2 className='Caption'>DATOS DE IDENTIFICACIÓN</h2>
                 <p className='text'><span>Nombre:</span><br />Javier Perez Ramirez</p>
@@ -19,11 +19,11 @@ function Iden_dataAdmin() {
                     <button className='btn-edit blue' onClick={() => changeStatusModalIden(!statusModalIden)}>EDITAR</button>
                 </div>
             </div>
-            <Modal_EditAdmin
+            <ModalEditAdmin
                 status={statusModalIden}
                 changeStatus={changeStatusModalIden}
             >
-                <img src={photo_Admin} alt="photo Admin" />
+                <img src={photoAdmin} alt="photoAdmin" />
                 <button>CAMBIAR FOTO</button>
                 <div>
                     <label >Nombre(s):</label>
@@ -56,10 +56,10 @@ function Iden_dataAdmin() {
                     />
                 </div>
                 <button>GUARDAR CAMBIOS</button>
-            </Modal_EditAdmin>
+            </ModalEditAdmin>
         </div>
 
     )
 }
 
-export default Iden_dataAdmin;
+export default IdendataAdmin;

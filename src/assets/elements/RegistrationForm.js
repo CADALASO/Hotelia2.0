@@ -31,14 +31,35 @@ const GroupInput = styled.div`
 position: relative;
 z-index: 90;
 `;
+const Select = styled.select`
+width: 100%;
+height: 30px;
+line-height:30px;
+background: rgba(51, 51, 51, 0);
+border: 0.5px solid var(--white);
+padding: 0 40px 0 10px;
+border-radius: 3px;
+color: var(--white);
+font-family: 'Biko';
+transition: .3s ease all;
+&:focus{
+    border: 2px solid ${colors.border};
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,.4)
+}
+`;
 
+const MenuItem = styled.option`
+font-family: 'Biko';
+color: var(--black);
+`;
 const Input = styled.input`
 width: 100%;
 height: 30px;
 line-height:30px;
 background-color: rgba(51, 51, 51, 0);
 border: 0.5px solid var(--white);
-padding: 0 40px 0 10px;
+padding: 0 40px 0 15px;
 border-radius: 3px;
 color: var(--white);
 font-family: 'Biko';
@@ -48,6 +69,10 @@ transition: .3s ease all;
     border: 2px solid ${colors.border};
     outline: none;
     box-shadow: 3px 0px 30px rgba(163,163,163,.4)
+}
+
+&::placeholder{
+    color: var(--white);
 }
 
 &[type="date"]::-webkit-calendar-picker-indicator{
@@ -111,7 +136,7 @@ const ButtonContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 2rem 0;
+margin: 1rem 0;
 `;
 
 const SaveButton = styled.button`
@@ -173,4 +198,6 @@ export {
     SaveButton,
     SuccessMessage,
     ErrorMessage,
+    Select,
+    MenuItem
 }
