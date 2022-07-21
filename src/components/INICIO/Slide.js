@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import '../../assets/css/Inicio.css'
 
 
 export default class SimpleSlider extends Component {
@@ -11,9 +12,10 @@ export default class SimpleSlider extends Component {
             speed: 350,
             slidesToShow: 1,
             slidesToScroll: 1
+            
         };
         return (
-            <div>
+            <div className="banner-inicio">
                 <Slider {...settings}>
                     <div>
                         <div className='banner-inicio-1'>

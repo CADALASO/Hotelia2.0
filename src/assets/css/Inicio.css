@@ -11,7 +11,15 @@
 body{
     overflow-x: hidden;
 }
+
+.banner-inicio{
+    width: 100vw;
+    height: 78vh;
+    background-color: red;
+}
+
 .banner-inicio-1{
+    width: 100vw;
     background-image: url('../img/hotel-1.png');
     background-position: center;
     background-size: cover;
@@ -331,8 +339,7 @@ a{
 
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .banner-inicio-1{
-        width: 500px;
+    .banner-inicio{
+        height: 130vh;
     }
-
 }

@@ -110,7 +110,7 @@ function CardSlide() {
                                             <div className="card__1">
                                                 <h1>{habitaciones.habitacion}</h1>
                                                 <p>{habitaciones.descripcion}</p>
-                                                <h2>{habitaciones.precio}</h2>
+                                                <h2>{habitaciones.precio} COP / NOCHE</h2>
 
                                                 
                                                 
@@ -161,7 +161,7 @@ function CardSlide() {
 
                                         <div className='precio'>
                                             <h1>PRECIO</h1>
-                                            <p>{habitaciones.precio}</p>
+                                            <p>{habitaciones.precio} COP / NOCHE</p>
                                         </div>
                                     </div>
                                     
