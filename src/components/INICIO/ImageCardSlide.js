@@ -5,19 +5,19 @@ import '../../assets/css/Inicio.css'
 
 
 function ImageCardSlide({ carousel }) {
-  const settings = {
-    dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 3000,
-      cssEase: "linear"
-  };
+  // const settings = {
+  //   dots: true,
+  //     infinite: true,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     speed: 2000,
+  //     autoplaySpeed: 3000,
+  //     cssEase: "linear"
+  // };
   return (
     <div className="img-cards-slide">
-      <Slider {...settings}>
+      {/* <Slider {...settings}> */}
         {
           carousel?.map((imagen, index) => {
             switch (imagen[0]) {
@@ -30,7 +30,7 @@ function ImageCardSlide({ carousel }) {
             }
           })
         }
-      </Slider>
+      {/* </Slider> */}
     </div>
   );
 }

@@ -41,7 +41,7 @@ function FormHab() {
     }
 
     /*4. Crear petición asíncrona*/
-    const url = "https://crud-hotelia.herokuapp.com/habitaciones/";
+    const url = "https://hoteliakuepa.herokuapp.com/habitaciones/";
 
     /*3. funcion para procesar el envío del formulario*/
     const handleSubmit = async (e) => {
@@ -65,9 +65,6 @@ function FormHab() {
             )
         }
     }
-
-    
-
 
     return (
         <div>
