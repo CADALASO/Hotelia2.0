@@ -21,28 +21,6 @@ function ListHabs() {
         })
 
     }, [])
-
-    // const handleSubmit=async(e)=>{
-    //     e.preventDefault();
-    //     const response=await axios.put(`${api}/${dataModal.id}`,dataModal);
-    //     console.log(response);  
-    //     if(response.status===200){
-    //         Swal.fire(
-    //             'Cambio Guardado!',
-    //             `El estudiante <strong> ${response.data.nombre} ${response.data.apellido}</strong> ha sido actualizado exitosamente!`,
-    //             'success'
-    //         )
-    //         handleClose();
-    //         setUplist(!upList);
-    //     }
-    //     else{
-    //         Swal.fire(
-    //             'Error!',
-    //             'Hubo un problema al actualizar el estudiante!',
-    //             'error'
-    //         )
-    //     }
-    // }
     return (
         <div>
             <div className='nav-bar-list'>Header</div>
@@ -68,7 +46,7 @@ function ListHabs() {
                                         <button
                                             onClick={() => {
                                                 setModal(true)
-                                                setHabitaciones(habitaciones)
+                                                setHabitacion(habitaciones)
                                             }}
                                             className="reservar-cards-list">EDITAR
                                         </button>
