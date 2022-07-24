@@ -1,6 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import ImageCardSlide from '../components/INICIO/ImageCardSlide';
+import React, { useEffect, useState } from 'react';
 import { api } from '../utils/peticiones';
 import Nevera from '../assets/img/iconos/nevera.png'
 import Footer from '../components/Footer/Footer';
@@ -21,6 +20,7 @@ function ListHabs() {
         })
 
     }, [])
+
     return (
         <div>
             <div className='nav-bar-list'>Header</div>
@@ -34,7 +34,7 @@ function ListHabs() {
                             <div className='flex-list-habs'>
                                 <div className="container-list">
                                     <div className="image-card-slide">
-                                        <ImageCardSlide carousel={habitaciones.fotos} />
+                                        <img src={habitaciones.img} className="habs-cards-list" alt="fotos"/>
 
                                     </div>
 
@@ -60,10 +60,10 @@ function ListHabs() {
                                         <div className="card__1-list" key={habitaciones.id}>
                                             <div className="content__1-list">
                                                 <div className="cards-list" id='habitacion'>
-                                                    <div className="card__1">
-                                                        <h1 className='list-h1'>{habitaciones.habitacion}</h1>
-                                                        <p>{habitaciones.descripcion}</p>
-                                                        <h2>{habitaciones.precio} COP / NOCHE</h2>
+                                                    <div className="card__1 contenido-list">
+                                                        <h1 className='list-h1'>{habitaciones.nombrehab}</h1>
+                                                        <p className='descrip'>{habitaciones.descripcion}</p>
+                                                        <h2>{habitaciones.valornoche} COP / NOCHE</h2>
                                                     </div>
 
                                                 </div>
@@ -78,7 +78,7 @@ function ListHabs() {
                                                 <div className="line-1-list">
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-bed"></i>
-                                                        <p>{habitaciones.nocamas}</p>
+                                                        <p>{habitaciones.camas} cama(s)</p>
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-vault"></i>
@@ -104,13 +104,13 @@ function ListHabs() {
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-bath"></i>
-                                                        <p>{habitaciones.baño}</p>
+                                                        <p>{habitaciones.banio}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className='precio-list'>
                                                     <h1>PRECIO</h1>
-                                                    <p>{habitaciones.precio}</p>
+                                                    <p>{habitaciones.valornoche} COP / NOCHE</p>
                                                 </div>
 
 

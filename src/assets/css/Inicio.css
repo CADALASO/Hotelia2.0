@@ -15,11 +15,11 @@ body{
 .banner-inicio{
     width: 100vw;
     height: 78vh;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .banner-inicio-1{
-    width: 100vw;
+    width: auto;
     background-image: url('../img/hotel-1.png');
     background-position: center;
     background-size: cover;
@@ -218,12 +218,12 @@ body{
 
 .descubre-galeria{
     padding: 3rem;
-    width: 38vw;
+    width: 32vw;
     height: 55vh;
 }
 
 .descubre-galeria img{
-    width: 38vw;
+    width: 32vw;
 }
 
 
@@ -232,7 +232,6 @@ body{
     justify-content: center;
     flex-direction: column;
     font-family: 'Akrobat';
-    
     margin-bottom: 2rem;
     height: 150vh;
 }

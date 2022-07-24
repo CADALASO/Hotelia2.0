@@ -9,6 +9,19 @@
     color: white;
 }
 
+.habs-cards-list{
+    width: 50vw;
+    border: 2px solid black;
+    height: 30vh;
+}
+
+.contenido-list .descrip{
+    text-align: center;
+    font-size: 25px;
+    line-height:30px;
+    height: 12vh;
+}
+
 
 .container-list-habs h1{
     text-align: center;
@@ -19,6 +32,7 @@
 }
 
 .cards-list-habs h1{
+    height: 12vh;
     font-weight: bold;
     margin-bottom: 3rem;
     color: initial;
@@ -26,6 +40,12 @@
 
 .list-h1{
     height: 6vh;
+}
+
+.contenido-list h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -102,9 +122,10 @@
 }
 
 .precio-list p{
+    padding: 0rem 0rem;
     font-size: 22px;
     font-weight: 500;
-    height: 11.5vh;
+    height: 20vh;
 }
 
 .precio-list h1{
@@ -156,7 +177,7 @@
 .cards-list h2{
     padding: 0 2rem;
     font-family: 'Biko';
-    text-align: right;
+    text-align: center;
     padding-top: 1rem;
 }
 

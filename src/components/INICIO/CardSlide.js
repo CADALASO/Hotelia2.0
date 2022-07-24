@@ -3,7 +3,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
-import ImageCardSlide from './ImageCardSlide';
 import Nevera from '../../assets/img/iconos/nevera.png'
 import { api } from '../../utils/peticiones';
 import '../../assets/css/CardSlide.css'
@@ -38,7 +37,7 @@ function CardSlide() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 4,
         initialSlide: 0,
         nextArrow: <SampleNextArrow />,
@@ -47,8 +46,8 @@ function CardSlide() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
@@ -92,7 +91,7 @@ function CardSlide() {
                     habitaciones?.map(habitaciones => (
                         <div className="container">
                             <div className="image-card-slide">
-                                <ImageCardSlide carousel={habitaciones.fotos} />
+                                <img src={habitaciones.img} className="habs-cards" alt="fotos"/>
                             </div>
 
                             <div className="button-card-inicio">
@@ -107,13 +106,10 @@ function CardSlide() {
 
                                     <div className="content__1">
                                         <div className="cards" id='habitacion'>
-                                            <div className="card__1">
-                                                <h1>{habitaciones.habitacion}</h1>
+                                            <div className="card__1 contenido-card">
+                                                <h1>{habitaciones.nombrehab}</h1>
                                                 <p>{habitaciones.descripcion}</p>
-                                                <h2>{habitaciones.precio} COP / NOCHE</h2>
-
-                                                
-                                                
+                                                <h2>{habitaciones.valornoche} COP / NOCHE</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -129,11 +125,11 @@ function CardSlide() {
                                         <div className="line-1">
                                             <div className='texto-icono-cardback'>
                                                 <i className="fa-solid fa-bed"></i>
-                                                <p>{habitaciones.nocamas}</p>
+                                                <p>{habitaciones.camas} camas</p>
                                             </div>
                                             <div className='texto-icono-cardback'>
                                                 <i className="fa-solid fa-vault"></i>
-                                                <p>{habitaciones.cajasfuertes}</p>
+                                                <p>{habitaciones.cajafuerte}</p>
                                             </div>
                                         </div>
 
@@ -155,13 +151,13 @@ function CardSlide() {
                                             </div>
                                             <div className='texto-icono-cardback'>
                                                 <i className="fa-solid fa-bath"></i>
-                                                <p>{habitaciones.baño}</p>
+                                                <p>{habitaciones.banio}</p>
                                             </div>
                                         </div>
 
                                         <div className='precio'>
                                             <h1>PRECIO</h1>
-                                            <p>{habitaciones.precio} COP / NOCHE</p>
+                                            <p>{habitaciones.valornoche} COP / NOCHE</p>
                                         </div>
                                     </div>
                                     

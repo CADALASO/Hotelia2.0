@@ -84,6 +84,7 @@
 }
 
 .habs-cards{
+    border: 2px solid black;
     padding: 0 auto;
     width: 26vw;
     height: 40vh;
@@ -104,9 +105,10 @@
 /*-------------------------*/
 
 .cards h1{
+    height: 10vh;
     padding: 0 2rem;
     font-family: 'Akrobat';
-    text-align: left;
+    text-align: center;
     padding-top: 1rem;
 }
 
@@ -120,9 +122,11 @@
 }
 
 .cards h2{
+    font-size: 22px;
+    margin: 1rem 0;
     padding: 0 2rem;
     font-family: 'Biko';
-    text-align: right;
+    text-align: center;
     padding-top: 1rem;
 }
 
@@ -140,13 +144,20 @@
     border-radius: 4px;
 }
 
+.contenido-card p{
+    text-align: center;
+    font-size: 25px;
+    line-height:30px;
+    height: 12vh;
+}
+
 
 
 
 /* ______________________________________________ ANIMACION ______________________________________________ */
 .container{
     height: 100vh;
-    padding: 5rem 2rem;
+    padding: 0rem 5rem;
 }
 
 .card{
