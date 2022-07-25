@@ -3,11 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../utils/peticiones';
 import Nevera from '../assets/img/iconos/nevera.png'
 import Footer from '../components/Footer/Footer';
-
-
 import ModalEdit from '../Admin/Modal'
 
-import '../assets/css/ListHabs.css'
+import '../assets/css/ListHabs.css';
+
 function ListHabs() {
     const [modal, setModal] = useState(false);
     const [habitacion, setHabitacion] = useState({})
@@ -34,7 +33,7 @@ function ListHabs() {
                             <div className='flex-list-habs'>
                                 <div className="container-list">
                                     <div className="image-card-slide">
-                                        <img src={habitaciones.img} className="habs-cards-list" alt="fotos"/>
+                                        <img src={`https://hoteliakuepa.herokuapp.com${habitaciones.img}`} className="habs-cards-list" alt="fotos"/>
 
                                     </div>
 

@@ -9,10 +9,14 @@
     color: white;
 }
 
+
+
 .habs-cards-list{
-    width: 50vw;
-    border: 2px solid black;
-    height: 30vh;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 3px;
+    width: 25vw;
+    height: 35vh;
 }
 
 .contenido-list .descrip{

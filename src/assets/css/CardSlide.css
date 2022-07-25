@@ -89,7 +89,7 @@
 }
 
 .habs-cards{
-    border: 2px solid black;
+    border-radius: 5px;
     padding: 0 auto;
     width: 26vw;
     height: 40vh;
