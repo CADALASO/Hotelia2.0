@@ -157,6 +157,7 @@ function FormHab() {
                             <label>Fotos:</label>
                             <div className='flex-select-form'>
                                 <input 
+                                    // value={`https://hoteliakuepa.herokuapp.com${data.img}`}
                                     value={data.img}
                                     onChange={handleChange} 
                                     className='fotos-edit-form' 
