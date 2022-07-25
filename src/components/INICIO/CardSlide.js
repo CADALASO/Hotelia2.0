@@ -8,69 +8,11 @@ import { api } from '../../utils/peticiones';
 import '../../assets/css/CardSlide.css'
 import { Link } from "react-router-dom";
 
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "#157A8A", borderRadius: "35px", height: "20px", width: "35px", paddingTop: "0.6rem", padding: "0.2rem" }}
-            onClick={onClick}
-        />
-    );
-}
 
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "#157A8A", borderRadius: "35px", height: "20px", width: "35px", paddingTop: "0.6rem", padding: "0.2rem" }}
-            onClick={onClick}
-        />
-    );
-}
 
 
 function CardSlide() {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 4,
-        initialSlide: 0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
-
+    
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [habitaciones, setHabitaciones] = useState([]);
     useEffect(() => {
@@ -85,11 +27,10 @@ function CardSlide() {
 
 
     return (
-        <div>
-            <Slider {...settings}>
+        <div className="card-habitaciones">
                 {
                     habitaciones?.map(habitaciones => (
-                        <div className="container">
+                        <div className="container ">
                             <div className="image-card-slide">
                                 <img src={`https://hoteliakuepa.herokuapp.com${habitaciones.img}`} className="habs-cards" alt="fotos"/>
                             </div>
@@ -169,7 +110,7 @@ function CardSlide() {
                     ))
 
                 }
-            </Slider>
+            
         </div>
     );
 }

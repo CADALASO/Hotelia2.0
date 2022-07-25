@@ -4,6 +4,11 @@
 }
 
 /* ------- CARDS ------- */
+.card-habitaciones{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
 
 .container-cards-inicio{
     padding: 0rem 3rem;
