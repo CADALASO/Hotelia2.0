@@ -93,6 +93,10 @@ body{
 }
 
 .buscar-inicio{
+    
+}
+
+.buscar-inicio form{
     padding: 3rem 3rem;
     border-radius: 42px;
     height:12vh;
@@ -101,9 +105,7 @@ body{
     backdrop-filter: blur(87px);
     box-shadow: 0px 4px 17px grey;
     margin: -4rem auto;
-}
 
-.buscar-inicio form{
     font-family: 'Akrobat';
     display: flex;
     justify-content: space-evenly;
@@ -340,5 +342,19 @@ a{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .banner-inicio{
         height: 130vh;
+    }
+
+    .buscar-inicio form{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* .buscar-inicio{
+        height: 15vh;
+    } */
+    .buscar-inicio form{
+        flex-direction: column;
+        height:32vh;
     }
 }

@@ -1,28 +1,17 @@
-import React, { useEffect, useState } from 'react'
-
-import Header from '../components/Header/Header'
-
+import React from 'react'
 
 import '../assets/css/Inicio.css'
+
+import Header from '../components/Header/Header'
 import SimpleSlider from '../components/INICIO/Slide'
 import FormBuscar from '../components/INICIO/FormBuscar'
 import CardSlide from '../components/INICIO/CardSlide'
-import axios from 'axios'
-import { api } from '../utils/peticiones'
 import ExpSlide from '../components/INICIO/ExpSlide'
 import Maps from '../assets/img/mapa.png'
 import Footer from '../components/Footer/Footer'
 import DescubreSlide from '../components/INICIO/DescubreSlide'
 
 function Inicio() {
-    const [habitaciones, setHabitaciones] = useState([]);
-    useEffect(() => {
-        axios(api).then(res => {
-            console.log(res)
-            setHabitaciones(res.data)
-        })
-
-    }, [])
 
   return (
     <div>
