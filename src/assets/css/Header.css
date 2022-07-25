@@ -14,7 +14,7 @@
 
 .button-reserva{
     float: right;
-    margin-right: 7rem;
+    margin-right: 2rem;
     line-height: 115px;
 }
 
@@ -33,7 +33,7 @@
 .navbar-ul{
     padding: 1rem 0;
     float: right;
-    margin-right: 50px;
+    margin-right: 10px;
     list-style: none;
 }
 
