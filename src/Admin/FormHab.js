@@ -162,10 +162,6 @@ function FormHab() {
                                     onChange={handleChange} 
                                     className='fotos-edit-form' 
                                     type='file' />
-                                <div className='botones-fotos-form'>
-                                    <button className='yes-foto-form'><i className="fa-solid fa-plus"></i></button>
-                                    <button className='delete-foto-form'><i className="fa-solid fa-trash-can"></i></button>
-                                </div>
                             </div>
 
 

@@ -233,31 +233,6 @@ label{
 
 
 
-.botones-fotos-form{
-    height: 7vh;
-    display: flex;
-    justify-content: space-around;
-    width: 7vw;
-}
-
-.botones-fotos-form button{
-    margin: 0 5px;
-    border-radius: 10px;
-    padding:5px 15px;
-    font-size: 23px;
-    border: none;
-}
-
-.yes-foto-form{
-    background-color: #c8f1d8;
-    color: #49ad75;
-}
-
-.delete-foto-form{
-    background-color: #D98880;
-    color: #4c0801;
-}
-
 
 
 

@@ -5,25 +5,43 @@ import Cerrar from '../assets/img/iconos/CERRAR.png'
 import '../assets/css/ModalEdit.css'
 import axios from 'axios';
 import { api } from '../utils/peticiones';
+import Swal from 'sweetalert2';
 
 function Modal({ habitaciones, close }) {
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         console.log(e.target.habitacion.value)
-        habitaciones.habitacion = e.target.habitacion.value
+        habitaciones.nombrehab = e.target.nombrehab.value
         habitaciones.descripcion = e.target.descripcion.value
-        habitaciones.fotos = e.target.fotos.value
+        habitaciones.img = e.target.img.value
         habitaciones.nocamas = e.target.nocamas.value
         habitaciones.cajasfuertes = e.target.cajasfuertes.value
         habitaciones.tv = e.target.tv.value
         habitaciones.wifi = e.target.wifi.value
         habitaciones.nevera = e.target.nevera.value
         habitaciones.precio = e.target.precio.value
-        habitaciones.baño = e.target.baño.value
+        habitaciones.banio = e.target.baño.value
         habitaciones.nohab = e.target.nohab.value
         habitaciones.cappersonas = e.target.cappersonas.value
         habitaciones.nocamas = e.target.nocamas.value
-        axios.put(api + habitaciones.id, habitaciones)
+        // axios.put(api + habitaciones._id, habitaciones)
+
+        const response = await axios.put(api + habitaciones._id, habitaciones)
+        if (response.status === 200) {
+            Swal.fire(
+                'Cambio Guardado!',
+                `El estudiante <strong> ${response.data.habitacion}</strong> ha sido actualizado exitosamente!`,
+                'success'
+            )
+            handleClose();
+        }
+        else {
+            Swal.fire(
+                'Error!',
+                'Hubo un problema al actualizar el estudiante!',
+                'error'
+            )
+        }
     }
 
     const handleClose = () => {
@@ -86,15 +104,11 @@ function Modal({ habitaciones, close }) {
                                 <div className='line4-habitacion-edit'>
                                     <div className='flex-form-edit  file-select' id="src-file1">
                                         <label>Fotos:</label>
-                                        <div className='flex-select'>
-                                            <input name='fotos' className='fotos-edit' type='file' />
-                                            <div className='botones-fotos'>
-                                                <button className='yes-foto'><i className="fa-solid fa-plus"></i></button>
-                                                <button className='delete-foto'><i className="fa-solid fa-trash-can"></i></button>
-                                            </div>
+                                        <div className='flex-select-edit'>
+                                            <input
+                                                className='fotos-edit-edit'
+                                                type='file' />
                                         </div>
-                                        
-                                        
                                     </div>
                                 </div>
                                 <div className='line5-habitacion-edit'>

@@ -183,85 +183,7 @@ label{
     border: 3px solid #D9D9D9;
 }
 
-/* :::::::::::::::::::::::::INPUT FILE:::::::::::::::::::: */
-.flex-select{
-    height: 5vh;
-    width: 40vw;
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: row;
-    position: relative;
-    /* z-index: 100; */
-}
 
-
-.file-select {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-}
-
-.file-select::before {
-    cursor: pointer;
-    padding: 3px 0px;
-    font-weight: 100;
-    font-family: 'Biko';
-    width: 30vw;
-    height: 30px;
-    background-color: var(--negro);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    content: 'Seleccionar';
-    /* texto por defecto */
-    position: absolute;
-    left: 5px;
-    right: 0;
-    top: 30px;
-    bottom: 0;
-}
-
-.file-select input[type="file"] {
-    cursor: pointer;
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-}
-
-#src-file1::before {
-    cursor: pointer;
-    content: 'Seleccionar archivo';
-}
-
-.botones-fotos{
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    width: 7vw;
-}
-
-.botones-fotos button{
-    margin: 0 5px;
-    border-radius: 10px;
-    padding:5px 15px;
-    font-size: 23px;
-    border: none;
-}
-
-.yes-foto{
-    background-color: #c8f1d8;
-    color: #49ad75;
-}
-
-.delete-foto{
-    background-color: #D98880;
-    color: #4c0801;
-}
 
 /* ::::::::::::::::::::::::::::::::::::::::::::: */
 
@@ -350,4 +272,25 @@ label{
 
 .precio-form-edit{
     
+}
+
+/* :::::::::::::::::::::::::INPUT FILE:::::::::::::::::::: */
+
+.file-select-edit label{
+    font-size: 25px;
+}
+
+.file-select-edit input {
+    background-color: #7a7a7a;
+    font-style: normal;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    padding-right: 5rem;
+    margin: 0 4rem;
+    cursor: pointer;
+    opacity: 1;
+    width: 70vw;
+    height:5vh;
+    display: inline-block;
 }
