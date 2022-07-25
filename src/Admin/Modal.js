@@ -24,23 +24,23 @@ function Modal({ habitaciones, close }) {
         habitaciones.nohab = e.target.nohab.value
         habitaciones.cappersonas = e.target.cappersonas.value
         habitaciones.nocamas = e.target.nocamas.value
-        // axios.put(api + habitaciones._id, habitaciones)
+        const response = axios.put(api + habitaciones._id, habitaciones)
 
-        const response = await axios.put(api + habitaciones._id, habitaciones)
-        if (response.status === 200) {
-            Swal.fire(
-                'Cambio Guardado!',
-                `El estudiante <strong> ${response.data.habitacion}</strong> ha sido actualizado exitosamente!`,
-                'success'
-            )
-            handleClose();
-        }
-        else {
-            Swal.fire(
-                'Error!',
-                'Hubo un problema al actualizar el estudiante!',
-                'error'
-            )
+        if(response.status===200){
+            Swal.fire({
+                title: 'Desea guardar los cambios?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Guardar',
+                denyButtonText: `No guardar`,
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                  Swal.fire('Guardado!', '', 'success')
+                } else if (result.isDenied) {
+                  Swal.fire('Los cambios no fueron guardados', '', 'info')
+                }
+              })
         }
     }
 

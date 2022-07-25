@@ -8,9 +8,6 @@ import ModalEdit from '../Admin/Modal'
 import '../assets/css/ListHabs.css';
 
 function ListHabs() {
-    const [modal, setModal] = useState(false);
-    const [habitacion, setHabitacion] = useState({})
-
     const [habitaciones, setHabitaciones] = useState([]);
     useEffect(() => {
         axios(api).then(res => {
@@ -20,6 +17,9 @@ function ListHabs() {
 
     }, [])
 
+    const [modal, setModal] = useState(false);
+    const [habitacion, setHabitacion] = useState({})
+    
     return (
         <div>
             <div className='nav-bar-list'>Header</div>
@@ -45,13 +45,11 @@ function ListHabs() {
                                         <button
                                             onClick={() => {
                                                 setModal(true)
-                                                setHabitacion(habitaciones)
+                                                setHabitacion(habitacion)
                                             }}
                                             className="reservar-cards-list">EDITAR
                                         </button>
-                                        {
-                                            modal ? <ModalEdit close={setModal} habitacion={habitacion} /> : null
-                                        }
+                                        
                                     </div>
 
                                     <div className="card-list">
@@ -81,29 +79,29 @@ function ListHabs() {
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-vault"></i>
-                                                        <p>{habitaciones.cajasfuertes?"Caja fuerte":"No"}</p>
+                                                        <p>{habitaciones.cajasfuertes?"Si":"No"}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className="line-2-list">
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-tv"></i>
-                                                        <p>{habitaciones.tv}</p>
+                                                        <p>{habitaciones.tv?"Si":"No"}</p>
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-wifi"></i>
-                                                        <p>{habitaciones.wifi}</p>
+                                                        <p>{habitaciones.wifi?"Si":"No"}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className="line-3-list">
                                                     <div className='texto-icono-cardback-list'>
                                                         <img src={Nevera} alt='nevera' />
-                                                        <p>{habitaciones.nevera}</p>
+                                                        <p>{habitaciones.nevera?"Si":"No"}</p>
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-bath"></i>
-                                                        <p>{habitaciones.banio}</p>
+                                                        <p>{habitaciones.banio?"Si":"No"}</p>
                                                     </div>
                                                 </div>
 
@@ -125,9 +123,11 @@ function ListHabs() {
                         ))
                     }
 
-
+                    
                 </div>
-                
+                {
+                        modal ? <ModalEdit close={setModal} habitacion={habitacion} /> : null
+                    }
 
             </div>
 
