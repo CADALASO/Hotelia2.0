@@ -14,16 +14,15 @@ function Modal({ habitaciones, close }) {
         habitaciones.nombrehab = e.target.nombrehab.value
         habitaciones.descripcion = e.target.descripcion.value
         habitaciones.img = e.target.img.value
-        habitaciones.nocamas = e.target.nocamas.value
-        habitaciones.cajasfuertes = e.target.cajasfuertes.value
+        habitaciones.camas = e.target.camas.value
+        habitaciones.cajafuerte = e.target.cajafuerte.value
         habitaciones.tv = e.target.tv.value
         habitaciones.wifi = e.target.wifi.value
         habitaciones.nevera = e.target.nevera.value
-        habitaciones.precio = e.target.precio.value
-        habitaciones.banio = e.target.baño.value
-        habitaciones.nohab = e.target.nohab.value
+        habitaciones.valornoche = e.target.valornoche.value
+        habitaciones.banio = e.target.banio.value
+        habitaciones._id = e.target._id.value
         habitaciones.capacidad = e.target.cappersonas.value
-        habitaciones.nocamas = e.target.nocamas.value
         const response = axios.put(api + habitaciones._id, habitaciones)
 
         if(response.status===200){
@@ -66,27 +65,27 @@ function Modal({ habitaciones, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input name='nohab' id='nohab' className='no-hab-edit' type='number'/>
+                                        <input name='_id' id='_id' className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input name='habitacion' id='habitacion' className='nombre-hab-edit' type='text'/>
+                                        <input name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
                                 <div className='line2-habitacion-edit'>
                                     <div className='flex-form-edit capacidad-personas'>
                                         <label>Capacidad de Personas:</label>
-                                        <input name='cappersonas' type='number'/>
+                                        <input name='capacidad' type='number'/>
                                     </div>
                                     <div className='flex-form-edit precio-edit'>
                                         <label>Precio:</label>
-                                        <input name='precio' className='precio-form-edit' type='number'/>
+                                        <input name='valornoche' className='precio-form-edit' type='number'/>
                                     </div>
                                     <div className='flex-form-edit'>
                                         <label>No. de Camas:</label>
-                                        <input name='nocamas' className='no-camas' type='number' />
+                                        <input name='camas' className='no-camas' type='number' />
                                     </div>
 
                                 </div>
@@ -106,6 +105,7 @@ function Modal({ habitaciones, close }) {
                                         <label>Fotos:</label>
                                         <div className='flex-select-edit'>
                                             <input
+                                                name='img'
                                                 className='fotos-edit-edit'
                                                 type='file' />
                                         </div>
