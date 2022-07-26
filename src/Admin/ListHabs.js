@@ -6,6 +6,7 @@ import Footer from '../components/Footer/Footer';
 import ModalEdit from '../Admin/Modal'
 
 import '../assets/css/ListHabs.css';
+import Swal from 'sweetalert2';
 
 function ListHabs() {
     const [habitaciones, setHabitaciones] = useState([]);
@@ -19,6 +20,9 @@ function ListHabs() {
 
     const [modal, setModal] = useState(false);
     const [habitacion, setHabitacion] = useState({})
+
+    const apidelete = 'https://hoteliakuepa.herokuapp.com/habitaciones/id'
+
     
     return (
         <div>
@@ -45,16 +49,17 @@ function ListHabs() {
                                         <button
                                             onClick={() => {
                                                 setModal(true)
-                                                setHabitacion(habitacion)
+                                                setHabitacion(habitaciones)
                                             }}
                                             className="reservar-cards-list">EDITAR
                                         </button>
                                         
+                                
                                     </div>
 
                                     <div className="card-list">
                                         {/*  ---------- CARD PARTE delantera ---------- */}
-                                        <div className="card__1-list" key={habitaciones.id}>
+                                        <div className="card__1-list" key={habitaciones._id}>
                                             <div className="content__1-list">
                                                 <div className="cards-list" id='habitacion'>
                                                     <div className="card__1 contenido-list">
@@ -126,8 +131,8 @@ function ListHabs() {
                     
                 </div>
                 {
-                        modal ? <ModalEdit close={setModal} habitacion={habitacion} /> : null
-                    }
+                    modal ? <ModalEdit close={setModal} habitaciones={habitaciones} /> : null
+                }
 
             </div>
 

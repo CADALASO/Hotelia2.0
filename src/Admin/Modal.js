@@ -22,7 +22,7 @@ function Modal({ habitaciones, close }) {
         habitaciones.precio = e.target.precio.value
         habitaciones.banio = e.target.baño.value
         habitaciones.nohab = e.target.nohab.value
-        habitaciones.cappersonas = e.target.cappersonas.value
+        habitaciones.capacidad = e.target.cappersonas.value
         habitaciones.nocamas = e.target.nocamas.value
         const response = axios.put(api + habitaciones._id, habitaciones)
 
