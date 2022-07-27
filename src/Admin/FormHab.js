@@ -53,8 +53,8 @@ function FormHab() {
                 `La habitación <strong> ${response.data.habitacion}</strong> ha sido registrada exitosamente!`,
                 'success'
             )
-            history.push("/");
-            window.location('/Hotelia/list-habitaciones')
+            
+            // window.location('/Hotelia/list-habitaciones')
 
         } else {
             Swal.fire(

@@ -21,6 +21,7 @@ function ListHabs() {
     const [modal, setModal] = useState(false);
     const [habitacion, setHabitacion] = useState({})
 
+    
     const apidelete = 'https://hoteliakuepa.herokuapp.com/habitaciones/id'
 
     
@@ -33,11 +34,11 @@ function ListHabs() {
 
                 <div className='cards-list-habs'>
                     {
-                        habitaciones?.map(habitaciones => (
-                            <div className='flex-list-habs'>
-                                <div className="container-list">
+                        habitaciones?.map(habitacion => (
+                            <div className='flex-list-habs' key={habitacion._id}>
+                                <div className="container-list" key={habitacion._id}>
                                     <div className="image-card-slide">
-                                        <img src={`https://hoteliakuepa.herokuapp.com${habitaciones.img}`} className="habs-cards-list" alt="fotos"/>
+                                        <img src={`https://hoteliakuepa.herokuapp.com${habitacion.img}`} className="habs-cards-list" alt="fotos"/>
 
                                     </div>
 
@@ -49,7 +50,8 @@ function ListHabs() {
                                         <button
                                             onClick={() => {
                                                 setModal(true)
-                                                setHabitacion(habitaciones)
+                                                setHabitacion(habitacion)
+                                                console.log(habitacion)
                                             }}
                                             className="reservar-cards-list">EDITAR
                                         </button>
@@ -59,13 +61,13 @@ function ListHabs() {
 
                                     <div className="card-list">
                                         {/*  ---------- CARD PARTE delantera ---------- */}
-                                        <div className="card__1-list" key={habitaciones._id}>
+                                        <div className="card__1-list" key={habitacion._id}>
                                             <div className="content__1-list">
                                                 <div className="cards-list" id='habitacion'>
                                                     <div className="card__1 contenido-list">
-                                                        <h1 className='list-h1'>{habitaciones.nombrehab}</h1>
-                                                        <p className='descrip'>{habitaciones.descripcion}</p>
-                                                        <h2>{habitaciones.valornoche} COP / NOCHE</h2>
+                                                        <h1 className='list-h1'>{habitacion.nombrehab}</h1>
+                                                        <p className='descrip'>{habitacion.descripcion}</p>
+                                                        <h2>{habitacion.valornoche} COP / NOCHE</h2>
                                                     </div>
 
                                                 </div>
@@ -80,39 +82,39 @@ function ListHabs() {
                                                 <div className="line-1-list">
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-bed"></i>
-                                                        <p>{habitaciones.camas} cama(s)</p>
+                                                        <p>{habitacion.camas} cama(s)</p>
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-vault"></i>
-                                                        <p>{habitaciones.cajasfuertes?"Si":"No"}</p>
+                                                        <p>{habitacion.cajasfuertes?"Si":"No"}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className="line-2-list">
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-tv"></i>
-                                                        <p>{habitaciones.tv?"Si":"No"}</p>
+                                                        <p>{habitacion.tv?"Si":"No"}</p>
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-wifi"></i>
-                                                        <p>{habitaciones.wifi?"Si":"No"}</p>
+                                                        <p>{habitacion.wifi?"Si":"No"}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className="line-3-list">
                                                     <div className='texto-icono-cardback-list'>
                                                         <img src={Nevera} alt='nevera' />
-                                                        <p>{habitaciones.nevera?"Si":"No"}</p>
+                                                        <p>{habitacion.nevera?"Si":"No"}</p>
                                                     </div>
                                                     <div className='texto-icono-cardback-list'>
                                                         <i className="fa-solid fa-bath"></i>
-                                                        <p>{habitaciones.banio?"Si":"No"}</p>
+                                                        <p>{habitacion.banio?"Si":"No"}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className='precio-list'>
                                                     <h1>PRECIO</h1>
-                                                    <p>{habitaciones.valornoche} COP / NOCHE</p>
+                                                    <p>{habitacion.valornoche} COP / NOCHE</p>
                                                 </div>
 
 
@@ -127,11 +129,9 @@ function ListHabs() {
 
                         ))
                     }
-
-                    
                 </div>
                 {
-                    modal ? <ModalEdit close={setModal} habitaciones={habitaciones} /> : null
+                    modal ? <ModalEdit close={setModal} habitacion={habitacion} /> : null
                 }
 
             </div>
