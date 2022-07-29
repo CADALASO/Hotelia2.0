@@ -10,17 +10,17 @@ import Swal from 'sweetalert2';
 function Modal({ habitacion, close }) {
     const [dataModal, setDataModal] = useState({})
 
-    // const handleChangeModal = ({ target }) => {
-    //     setHabitacion({
-    //         ...habitacion,
-    //         [target.name]: target.value
-    //     })
-    // }
+    const handleChangeModal = ({ target }) => {
+        setDataModal({
+            ...dataModal,
+            [target.name]: target.value
+        })
+    }
 
     //agregamos otra constante al useState para actualizar el listado después de eliminar 
     const [upList, setUpList] = useState([false]);
 
-    const handleSubmit = async(e) => {
+    const handleEdit = async(e) => {
         e.preventDefault();
         const response = await axios.put(`${api}/${habitacion._id}`, habitacion);//await espera hasta que se ejcute la petición
         console.log(response);
@@ -61,18 +61,18 @@ function Modal({ habitacion, close }) {
                     </div>
                     <h1>EDITAR HABITACIÓN</h1>
 
-                    <form onSubmit={handleSubmit} className='formulario-modal'>
+                    <form onSubmit={handleEdit} className='formulario-modal'>
                         <div className='colummns-edit'>
                             <div className='column-1'>
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  value={habitacion._id} name='_id' id='_id' className='no-hab-edit' type='number'/>
+                                        <input  value={habitacion._id} onChange={handleChangeModal} name='_id' id='_id' className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input  value={habitacion.nombrehab} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
+                                        <input  value={habitacion.nombrehab} onChange={handleChangeModal} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
