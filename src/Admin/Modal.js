@@ -8,14 +8,14 @@ import { api } from '../utils/peticiones';
 import Swal from 'sweetalert2';
 
 function Modal({ habitacion, close }) {
-    // const [dataModal, setDataModal] = useState({})
+    const [dataModal, setDataModal] = useState({})
 
-    const handleChangeModal = ({ target }) => {
-        setHabitacion({
-            ...habitacion,
-            [target.name]: target.value
-        })
-    }
+    // const handleChangeModal = ({ target }) => {
+    //     setHabitacion({
+    //         ...habitacion,
+    //         [target.name]: target.value
+    //     })
+    // }
 
     //agregamos otra constante al useState para actualizar el listado después de eliminar 
     const [upList, setUpList] = useState([false]);
@@ -67,27 +67,27 @@ function Modal({ habitacion, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  value={habitacion._id} onChange={handleChangeModal} name='_id' id='_id' className='no-hab-edit' type='number'/>
+                                        <input  value={habitacion._id} name='_id' id='_id' className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input  value={habitacion.nombrehab} onChange={handleChangeModal} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
+                                        <input  value={habitacion.nombrehab} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
                                 <div className='line2-habitacion-edit'>
                                     <div className='flex-form-edit capacidad-personas'>
                                         <label>Capacidad de Personas:</label>
-                                        <input name='capacidad' id='capacidad' type='number'/>
+                                        <input value={habitacion.capacidad} name='capacidad' id='capacidad' type='number'/>
                                     </div>
                                     <div className='flex-form-edit precio-edit'>
                                         <label>Precio:</label>
-                                        <input name='valornoche' id='valornoche' className='precio-form-edit' type='number'/>
+                                        <input value={habitacion.valornoche} name='valornoche' id='valornoche' className='precio-form-edit' type='number'/>
                                     </div>
                                     <div className='flex-form-edit'>
                                         <label>No. de Camas:</label>
-                                        <input name='camas' id='camas' className='no-camas' type='number' />
+                                        <input value={habitacion.camas} name='camas' id='camas' className='no-camas' type='number' />
                                     </div>
 
                                 </div>
@@ -95,7 +95,7 @@ function Modal({ habitacion, close }) {
                                 <div className='line3-habitacion-edit'>
                                     <div className='flex-form-edit'>
                                         <label>Descripción:</label>
-                                        <textarea id="descripcion" name="descripcion" rows="7" cols="33" className='textarea-edit' />
+                                        <textarea value={habitacion.descripcion} id="descripcion" name="descripcion" rows="7" cols="33" className='textarea-edit' />
                                     </div>
 
                                 </div>
@@ -107,6 +107,7 @@ function Modal({ habitacion, close }) {
                                         <label>Fotos:</label>
                                         <div className='flex-select-edit'>
                                             <input
+                                                value={habitacion.img}
                                                 name='img'
                                                 id='img'
                                                 className='fotos-edit-edit'
@@ -148,12 +149,19 @@ function Modal({ habitacion, close }) {
                                                         <i className="fa-solid fa-wifi"></i>WI-FI
                                                     </p>
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='wifi' id='wifi' type="radio" />
+                                                        <input 
+                                                        name='wifi' 
+                                                        id='wifi' 
+                                                        type="radio" />
                                                         <label>Si</label>
                                                     </div>
 
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='wifi' id='wifi' type="radio" checked />
+                                                        <input 
+                                                        name='wifi' 
+                                                        id='wifi' 
+                                                        type="radio" 
+                                                        checked />
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -166,12 +174,19 @@ function Modal({ habitacion, close }) {
                                                         Nevera
                                                     </p>
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='nevera' id='nevera' type="radio" />
+                                                        <input 
+                                                            name='nevera' 
+                                                            id='nevera' 
+                                                            type="radio" />
                                                         <label>Si</label>
                                                     </div>
 
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='nevera' id='nevera' type="radio" checked />
+                                                        <input 
+                                                            name='nevera' 
+                                                            id='nevera' 
+                                                            type="radio" 
+                                                            checked />
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -181,12 +196,19 @@ function Modal({ habitacion, close }) {
                                                         <i className="fa-solid fa-tv"></i>TV
                                                     </p>
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='tv' id='tv' type="radio" />
+                                                        <input 
+                                                            name='tv' 
+                                                            id='tv' 
+                                                            type="radio" />
                                                         <label>Si</label>
                                                     </div>
 
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='tv' id='tv' type="radio" checked />
+                                                        <input 
+                                                            name='tv' 
+                                                            id='tv' 
+                                                            type="radio" 
+                                                            checked />
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -198,12 +220,19 @@ function Modal({ habitacion, close }) {
                                                         <i className="fa-solid fa-bath"></i>Baño
                                                     </p>
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='banio' id='banio' type="radio" />
+                                                        <input 
+                                                            name='banio' 
+                                                            id='banio' 
+                                                            type="radio" />
                                                         <label>Si</label>
                                                     </div>
 
                                                     <div className='selectors-radio-edit'>
-                                                        <input name='banio' id='banio' type="radio" checked />
+                                                        <input 
+                                                            name='banio' 
+                                                            id='banio' 
+                                                            type="radio" 
+                                                            checked />
                                                         <label >No</label>
                                                     </div>
                                                 </div>

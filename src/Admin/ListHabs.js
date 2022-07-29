@@ -53,7 +53,7 @@ function ListHabs() {
                                                 setHabitacion(habitacion)
                                                 console.log(habitacion)
                                             }}
-                                            className="reservar-cards-list">EDITAR
+                                            className="editar-cards-list">EDITAR
                                         </button>
                                         
                                 
@@ -64,10 +64,10 @@ function ListHabs() {
                                         <div className="card__1-list" key={habitacion._id}>
                                             <div className="content__1-list">
                                                 <div className="cards-list" id='habitacion'>
-                                                    <div className="card__1 contenido-list">
+                                                    <div className="contenido-list">
                                                         <h1 className='list-h1'>{habitacion.nombrehab}</h1>
                                                         <p className='descrip'>{habitacion.descripcion}</p>
-                                                        <h2>{habitacion.valornoche} COP / NOCHE</h2>
+                                                        <h2 className='precio-front-list'>{habitacion.valornoche} COP / NOCHE</h2>
                                                     </div>
 
                                                 </div>
@@ -77,7 +77,7 @@ function ListHabs() {
 
                                         {/*  ---------- CARD PARTE TRASERA ---------- */}
                                         <div className="card__2-list">
-                                            <div className="content__2">
+                                            <div className="content__2-list">
 
                                                 <div className="line-1-list">
                                                     <div className='texto-icono-cardback-list'>
@@ -113,7 +113,7 @@ function ListHabs() {
                                                 </div>
 
                                                 <div className='precio-list'>
-                                                    <h1>PRECIO</h1>
+                                                    <p className='titulo-precio'>PRECIO</p>
                                                     <p>{habitacion.valornoche} COP / NOCHE</p>
                                                 </div>
 
