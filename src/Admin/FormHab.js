@@ -104,7 +104,15 @@ function FormHab() {
                     </div>
 
                     <div className='line2-habitacion'>
-                        <div className='flex-form'>
+                        <div className='select-estado-form flex-form'>
+                            <label className='formulario__label estado-label'>Estado:</label>
+                            <select name="estado" className='estado-form'>
+                                <option value="value1" className='estado-form-yes'>DISPONIBLE</option>
+                                <option value="value2" className='estado-form-no'selected>NO DISPONIBLE</option>
+                                <option value="value3" className='estado-form-upkeep'>EN MANTENIMIENTO</option>
+                            </select>
+                        </div>
+                        <div className='flex-form flex-form-line2'>
                             <label className='formulario__label'>Capacidad de Personas:</label>
                             <input 
                                 type='number' 
@@ -113,7 +121,7 @@ function FormHab() {
                                 onChange={handleChange} 
                                 />
                         </div>
-                        <div className='flex-form'>
+                        <div className='flex-form flex-form-line2'>
                             <label className='formulario__label'>Precio:</label>
                             <input 
                                 placeholder="Ej: 000000"
@@ -124,9 +132,10 @@ function FormHab() {
                                 onChange={handleChange} 
                                 />
                         </div>
-                        <div className='flex-form'>
+                        <div className='flex-form flex-form-line2'>
                             <label className='formulario__label'>No. de Camas:</label>
                             <input 
+                                className='camas-input-form'
                                 type='number' 
                                 name='camas'
                                 value={data.camas}

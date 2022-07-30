@@ -45,6 +45,11 @@ function ListHabs() {
                                     <div className="button-card-inicio-list">
                                         <div className='disponible'>
                                             <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button>
+                                            {/* <select name="estado">
+                                                <option value="value1">Value 1</option>
+                                                <option value="value2" selected>Value 2</option>
+                                                <option value="value3">Value 3</option>
+                                            </select> */}
                                         </div>
 
                                         <button
