@@ -84,6 +84,10 @@ const Login = () => {
                             {touched.contraseña && errors.contraseña && <div className='error'>{errors.contraseña}</div>}
                         </div>
 
+                        <div className='registrate'>
+                            <Link to=''>¿No tienes una cuenta? Regístrate</Link>
+                        </div>
+
                         <div className='botones-login'>
                             <button type='submit'>INICIAR SESIÓN</button>
 
