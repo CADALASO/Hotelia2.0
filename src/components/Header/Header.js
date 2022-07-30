@@ -26,7 +26,7 @@ function Header() {
                     <li><Link to="/Hotelia/" className=' link'>Inicio</Link></li>
                     <li><Link to="" className=' link'>Habitaciones</Link></li>
                     <li><a href='#acerca-de-nosotros' className=' link'>Acerca de nosotros</a></li>
-                    <li><Link to="" className=' link login'>Registrarse / Iniciar sesión</Link></li>
+                    <li><Link to="/Hotelia/login" className=' link login'>Registrarse / Iniciar sesión</Link></li>
                 </ul>
             </nav>
         </div>
