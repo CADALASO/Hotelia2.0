@@ -185,7 +185,7 @@ body{
 
 .descubre-hotelia{
     font-family: 'Akrobat';
-    margin: 5rem 0;
+    margin: 1rem 0;
     display: flex;
     padding: 7rem 5rem;
     text-align: right;
@@ -345,7 +345,6 @@ a{
     .section-banner{
         padding: 0;
         height: 150vh;
-        margin-bottom: 15rem;
     }
 
     .banner-inicio-1{
@@ -385,6 +384,38 @@ a{
         width: 50vw;
         height: 70vh;
         flex-direction: column;
+    }
+
+    .descubre-hotelia{
+        width: 50vw;
+        flex-direction: column;
+        height: 150vh;
+        padding: 4rem 5rem;
+    }
+
+    .descubre{
+        align-items: center;
+        padding: 0 0rem;
+    }
+
+    .descubre h1{
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .descubre p{
+        width: 70vw;
+        text-align: center;
+    }
+    .descubre-galeria{
+        height: 35vh;
+        width: 60vw;
+        padding: 2rem 0rem;
+        margin: 0 -1rem;
+    }
+
+    .descubre-galeria img{
+        width: 72vw;
     }
 }
 
