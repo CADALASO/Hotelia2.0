@@ -16,8 +16,12 @@ function Inicio() {
   return (
     <div>
         <Header/>
-        <SimpleSlider/>
-        <FormBuscar/>
+
+        <div className='section-banner'>
+            <SimpleSlider/>
+            <FormBuscar/>
+        </div>
+        
 
         <div className='descubre-hotelia' id='acerca-de-nosotros' >
             <div className='descubre'>

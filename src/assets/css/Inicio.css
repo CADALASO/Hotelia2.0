@@ -12,43 +12,48 @@ body{
     overflow-x: hidden;
 }
 
-.banner-inicio{
-    width: 100vw;
-    height: 78vh;
-    /* background-color: red; */
+.section-banner{
+    height: 100vh;
 }
 
-.banner-inicio-1{
-    width: auto;
+.banner-1{
     background-image: url('../img/hotel-1.png');
     background-position: center;
     background-size: cover;
-    height: 500px;
-    color: white;
-    font-family: 'Akrobat';
-    padding: 0 7rem;
+    height: 70vh;
+    
+}
+
+
+.banner-inicio-1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    z-index: 100;
+    color: white;
+    font-family: 'Akrobat';
+    height: 70vh;
 }
 
 .banner-inicio-1 h1{
+    padding: 0 4rem;
     margin-bottom: 5rem;
     text-shadow: 3px 3px 4px #00000098;
     font-weight:900;
+    
     text-align: right;
-    width: 50vw;
     font-size: 80px;
 }
 
 .banner-inicio-1 h4{
     margin-top: -3rem;
+    padding: 0 4rem;
+    text-align: right;
     font-size: 30px;
     text-shadow: 4px 4px 4px #000000cc;
 }
 
-.banner-inicio-2{
+/* .banner-inicio-2{
     background-image: url('../img/slide2-inicio.png');
     background-position: top;
     background-size: cover;
@@ -90,11 +95,8 @@ body{
     text-align: center;
     width: 70vw;
     font-size: 70px;
-}
+} */
 
-.buscar-inicio{
-    
-}
 
 .buscar-inicio form{
     padding: 3rem 3rem;
@@ -340,21 +342,53 @@ a{
 
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .banner-inicio{
-        height: 130vh;
+    .section-banner{
+        padding: 0;
+        height: 150vh;
+        margin-bottom: 15rem;
     }
 
+    .banner-1{}
+
+    .banner-inicio-1{
+        height: 40vh;
+        width: 100vw;
+    }
+
+    .banner-inicio-1 h1{
+        margin-bottom: 4rem;
+        font-size: 30px;
+    }
+
+    .banner-inicio-1 h4{
+        text-align: right;
+        font-size: 18px;
+    }
+
+
     .buscar-inicio form{
+        width: 50vw;
+        height: 70vh;
         flex-direction: column;
     }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /* .buscar-inicio{
+    
+    .buscar-inicio{
         height: 15vh;
-    } */
+        width: 10px;
+    }
+    
+
     .buscar-inicio form{
         flex-direction: column;
         height:32vh;
+    }
+
+    .banner-inicio-1{width: 100%;text-align: right;}
+    .banner-inicio-1 h1{
+        text-align: right;
+        width: 70vw;
     }
 }
