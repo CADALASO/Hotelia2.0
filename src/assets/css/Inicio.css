@@ -348,8 +348,6 @@ a{
         margin-bottom: 15rem;
     }
 
-    .banner-1{}
-
     .banner-inicio-1{
         height: 40vh;
         width: 100vw;
@@ -365,6 +363,23 @@ a{
         font-size: 18px;
     }
 
+    .fecha{
+        text-align: center;
+    }
+
+    .inputs input{
+        width: 40vw;
+    }
+
+    .inputs-habs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .habs-flex .hab{
+        width: 30vw;
+        margin-left: -3rem;
+    }
 
     .buscar-inicio form{
         width: 50vw;

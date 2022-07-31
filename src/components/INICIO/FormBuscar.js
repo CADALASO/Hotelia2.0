@@ -19,15 +19,21 @@ function FormBuscar() {
                 </div>
 
                 <div className='inputs'>
-                    <div className='habs-flex'>
+                    <div className='habs-flex inputs-habs'>
                         <div className='habs-label'>
                             <label>HUÉSPEDES</label>
-                            <input type='number' placeholder='Huésped' className='icono-image-2 hab border-hab-2'/>
+                            <input 
+                                type='number' 
+                                placeholder='Huésped' 
+                                className='icono-image-2 hab border-hab-2'/>
                         </div>
                     
                         <div className='habs-label'>
                             <label>HABITACIONES</label>
-                            <input type='number' placeholder='Hab.' className='icono-image hab border-hab-1'/>
+                            <input 
+                                type='number' 
+                                placeholder='Hab.' 
+                                className='icono-image hab border-hab-1'/>
                         </div>
                     
                     </div>
