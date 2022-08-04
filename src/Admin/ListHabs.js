@@ -24,6 +24,11 @@ function ListHabs() {
     
     const apidelete = 'https://hoteliakuepa.herokuapp.com/habitaciones/id'
 
+
+    const handleSelect = async(room, selectedStatus) =>{
+        const response = await axios.put(`${api}${room._id}`, {...room, estado: selectedStatus});
+
+    }
     
     return (
         <div>
@@ -45,9 +50,9 @@ function ListHabs() {
                                     <div className="button-card-inicio-list">
                                         <div className='disponible'>
                                             <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button>
-                                            {/* <select name="estado">
-                                                <option value="value1">Value 1</option>
-                                                <option value="value2" selected>Value 2</option>
+                                            {/* <select name="estado" onChange={(e)=>handleSelect(habitacion,e.target.value)}>
+                                                <option value="No disponible">No disponible</option>
+                                                <option value="disp" selected>Value 2</option>
                                                 <option value="value3">Value 3</option>
                                             </select> */}
                                         </div>
