@@ -8,21 +8,12 @@ import { api } from '../utils/peticiones';
 import Swal from 'sweetalert2';
 
 function Modal({ habitacion, close }) {
-    const [dataModal, setDataModal] = useState({})
-
-    const handleChangeModal = ({ target }) => {
-        setDataModal({
-            ...dataModal,
-            [target.name]: target.value
-        })
-    }
-
-    //agregamos otra constante al useState para actualizar el listado después de eliminar 
-    const [upList, setUpList] = useState([false]);
+    
 
     const handleEdit = async(e) => {
-        e.preventDefault();
-        const response = await axios.put(`${api}/${habitacion._id}`, habitacion);//await espera hasta que se ejcute la petición
+        //e.preventDefault()
+        console.log(`${api}${habitacion._id}`)
+        const response = await axios.put(`${api}${habitacion._id}`, room);//await espera hasta que se ejcute la petición
         console.log(response);
         if (response.status === 200) {
 
@@ -32,7 +23,6 @@ function Modal({ habitacion, close }) {
                 'success'
             )
             handleClose();
-            setUpList(!upList);
 
         } else {
             Swal.fire(
@@ -47,6 +37,12 @@ function Modal({ habitacion, close }) {
 
     const handleClose = () => {
         close(false)
+    }
+
+    const [room, setRoom] = useState(habitacion)
+
+    const handleValues = (event) => {
+        setRoom({...room,[event.target.name]:event.target.value})
     }
 
     return (
@@ -67,12 +63,12 @@ function Modal({ habitacion, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  value={habitacion._id} onChange={handleChangeModal} name='_id' id='_id' className='no-hab-edit' type='number'/>
+                                        <input  disabled value={room._id} onChange={handleValues} name='_id' id='_id' className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input  value={habitacion.nombrehab} onChange={handleChangeModal} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
+                                        <input value={room.nombrehab} onChange={handleValues} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
@@ -245,7 +241,7 @@ function Modal({ habitacion, close }) {
                         </div>
 
                         <div className='botones-editar-modal'>
-                            <button type='submit'>GUARDAR CAMBIOS</button>
+                            <button onClick={()=>handleEdit()}type='button'>GUARDAR CAMBIOS</button>
                         </div>
 
 
