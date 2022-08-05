@@ -294,3 +294,20 @@ label{
     height:5vh;
     display: inline-block;
 }
+
+
+
+/* :::::::::::::::::::::::::INPUT SELECT:::::::::::::::::::: */
+.estado-form-list{
+    width: 38vw;
+    height: 6vh;
+    margin-right: 1rem;
+    font-style: normal;
+    padding: 5px 15px;
+    font-family: 'Biko';
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    border: 3px solid #D9D9D9;
+    border-radius: 10px;
+}

@@ -75,7 +75,7 @@ function Modal({ habitacion, close }) {
                                 <div className='line2-habitacion-edit'>
                                     <div className='flex-form-edit capacidad-personas'>
                                         <label>Capacidad de Personas:</label>
-                                        <input value={habitacion.capacidad} name='capacidad' id='capacidad' type='number'/>
+                                        <input value={room.capacidad} name='capacidad' id='capacidad' type='number'/>
                                     </div>
                                     <div className='flex-form-edit precio-edit'>
                                         <label>Precio:</label>
@@ -83,7 +83,7 @@ function Modal({ habitacion, close }) {
                                     </div>
                                     <div className='flex-form-edit'>
                                         <label>No. de Camas:</label>
-                                        <input value={habitacion.camas} name='camas' id='camas' className='no-camas' type='number' />
+                                        <input value={room.camas} name='camas' id='camas' className='no-camas' type='number' />
                                     </div>
 
                                 </div>
@@ -91,7 +91,7 @@ function Modal({ habitacion, close }) {
                                 <div className='line3-habitacion-edit'>
                                     <div className='flex-form-edit'>
                                         <label>Descripción:</label>
-                                        <textarea value={habitacion.descripcion} id="descripcion" name="descripcion" rows="7" cols="33" className='textarea-edit' />
+                                        <textarea value={room.descripcion} id="descripcion" name="descripcion" rows="7" cols="33" className='textarea-edit' />
                                     </div>
 
                                 </div>
@@ -103,7 +103,7 @@ function Modal({ habitacion, close }) {
                                         <label>Fotos:</label>
                                         <div className='flex-select-edit'>
                                             <input
-                                                value={habitacion.img}
+                                                value={room.img}
                                                 name='img'
                                                 id='img'
                                                 className='fotos-edit-edit'
@@ -111,6 +111,17 @@ function Modal({ habitacion, close }) {
                                         </div>
                                     </div>
                                 </div>
+
+                                <div className='line4.5-habitacion-edit flex-form-edit'>
+                                    <label>Estado:</label>
+                                    <select name="estado" className='estado-form-list'>
+                                        <option value={habitacion.estado} className='estado-form-yes'>DISPONIBLE</option>
+                                        <option value={habitacion.estado} className='estado-form-no'>NO DISPONIBLE</option>
+                                        <option value={habitacion.estado} className='estado-form-upkeep'>EN MANTENIMIENTO</option>
+                                    </select>
+
+                                </div>
+
                                 <div className='line5-habitacion-edit'>
                                     <div className='flex-form-edit observaciones-edit'>
                                         <h3>Observaciones adicionales:</h3>
@@ -126,7 +137,7 @@ function Modal({ habitacion, close }) {
                                                             name='cajafuerte' 
                                                             id='cajafuerte' 
                                                             type="radio" 
-                                                            {...habitacion.cajafuerte=="si"?"Checked":" "}/>
+                                                            {...room.cajafuerte=="si"?"Checked":" "}/>
                                                         <label>Si</label>
                                                     </div>
 
@@ -135,7 +146,7 @@ function Modal({ habitacion, close }) {
                                                             name='cajafuerte' 
                                                             id='cajafuerte' 
                                                             type="radio" 
-                                                            {...habitacion.cajafuerte=="si"?"Checked":" "} />
+                                                            {...room.cajafuerte=="si"?"Checked":" "} />
                                                         <label >No</label>
                                                     </div>
                                                 </div>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
 import '../assets/css/FormHab.css'
 import Footer from '../components/Footer/Footer'
 import Nevera from '../assets/img/iconos/nevera.png'
+import Admin_NavBar from '../components/Dashboards/Admin_NavBar'
 
 function FormHab() {
     const history = useNavigate();
@@ -25,7 +26,8 @@ function FormHab() {
         tv: false,
         wifi: false,
         nevera: false,
-        banio: false
+        banio: false,
+        estado:""
     })
     /*2. Se usa la función handleChange para que cada vez que haya un cambio en el input
     guarde el name y el value del mismo */
@@ -50,10 +52,10 @@ function FormHab() {
         if (response.status === 200) {
             Swal.fire(
                 'Guardado!',
-                `La habitación <strong> ${response.data.habitacion}</strong> ha sido registrada exitosamente!`,
+                `La habitación <strong> ${response.data.nombrehab}</strong> ha sido registrada exitosamente!`,
                 'success'
             )
-            
+            // <Navigate to='/Hotelia/list-habitaciones'/>
             // window.location('/Hotelia/list-habitaciones')
 
         } else {
@@ -67,7 +69,8 @@ function FormHab() {
 
     return (
         <div>
-            <div className='nav-bar-list'>Header</div>
+            <Admin_NavBar/>
+            {/* <div className='nav-bar-list'>Header</div> */}
 
             <div className='container-form-habs'>
                 <h1>CREAR HABITACIÓN</h1>
@@ -106,10 +109,10 @@ function FormHab() {
                     <div className='line2-habitacion'>
                         <div className='select-estado-form flex-form'>
                             <label className='formulario__label estado-label'>Estado:</label>
-                            <select name="estado" className='estado-form'>
-                                <option value="value1" className='estado-form-yes'>DISPONIBLE</option>
-                                <option value="value2" className='estado-form-no'selected>NO DISPONIBLE</option>
-                                <option value="value3" className='estado-form-upkeep'>EN MANTENIMIENTO</option>
+                            <select name="estado"  className='estado-form'>
+                                <option value={data.estado} className='estado-form-yes'>DISPONIBLE</option>
+                                <option value={data.estado} className='estado-form-no'selected>NO DISPONIBLE</option>
+                                <option value={data.estado} className='estado-form-upkeep'>EN MANTENIMIENTO</option>
                             </select>
                         </div>
                         <div className='flex-form flex-form-line2'>

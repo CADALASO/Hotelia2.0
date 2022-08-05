@@ -48,13 +48,15 @@ function ListHabs() {
                                     </div>
 
                                     <div className="button-card-inicio-list">
+                                        
                                         <div className='disponible'>
-                                            <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button>
-                                            {/* <select name="estado" onChange={(e)=>handleSelect(habitacion,e.target.value)}>
-                                                <option value="No disponible">No disponible</option>
-                                                <option value="disp" selected>Value 2</option>
-                                                <option value="value3">Value 3</option>
-                                            </select> */}
+                                            {/* <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button> */}
+
+                                            <select name="estado" onChange={(e)=>handleSelect(habitacion,e.target.value)} className="disponible-cards-list">
+                                                <option value="DISPONIBLE">DISPONIBLE</option>
+                                                <option value="NO DISPONIBLE">NO DISPONIBLE</option>
+                                                <option value="EN MANTENIMIENTO">EN MANTENIMIENTO</option>
+                                            </select>
                                         </div>
 
                                         <button

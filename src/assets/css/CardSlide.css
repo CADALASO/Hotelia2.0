@@ -1,23 +1,23 @@
-:root{
+:root {
     --verde-botones: #157A8A;
     --negro: #333333;
 }
 
 /* ------- CARDS ------- */
 
-.container-cards-inicio{
+.container-cards-inicio {
     padding: 0rem 3rem;
     padding-bottom: 3rem;
-    
+
 }
 
-.button-card-inicio{
+.button-card-inicio {
     position: relative;
     top: 30px;
 }
 
 
-.card__2{
+.card__2 {
     box-shadow: 3px 8px 10px #BEB9B9;
     height: 45vh;
     color: #4C4C4C;
@@ -27,22 +27,28 @@
     background-repeat: no-repeat;
 }
 
-.line-1, .line-2, .line-3{
+.line-1,
+.line-2,
+.line-3 {
     font-size: 28px;
     display: flex;
     justify-content: center;
 }
 
-.line-1 p, .line-2 p, .line-3 p{
+.line-1 p,
+.line-2 p,
+.line-3 p {
     font-size: 25px;
 }
 
-.line-1 i, .line-2 i, .line-3 i{
+.line-1 i,
+.line-2 i,
+.line-3 i {
     margin-right: 5px;
     margin-left: 10px;
 }
 
-.texto-icono-cardback{
+.texto-icono-cardback {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,49 +56,51 @@
     margin: 20px 0;
 }
 
-.texto-icono-cardback p{
+.texto-icono-cardback p {
     margin: 0 8px;
     font-size: 20px;
 }
 
 
-.texto-icono-cardback img{
+.texto-icono-cardback img {
     width: 80%;
 }
 
-.precio{
+.precio {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Akrobat';
 }
 
-.precio p{
+.precio p {
     font-size: 22px;
     font-weight: 500;
     height: 11.5vh;
 }
 
-.precio h1{
+.precio h1 {
     font-size: 25px;
     margin-right: 50px;
 }
+
 /* Imagenes de las cards */
-.cards{
+.cards {
     padding: 1rem 0;
 }
 
-.habs-cards{
+.image-card-slide img{
     padding: 0 auto;
-    width: 26vw;
+    width: 25vw;
+    /* margin-left: -1.5rem; */
     height: 40vh;
     object-fit: cover;
     object-position: center;
 }
 
-.img-cards-slide{
+.img-cards-slide {
     width: 26vw;
-    border-radius: 20px; 
+    border-radius: 20px;
     position: relative;
     top: -30px;
 }
@@ -102,33 +110,39 @@
 
 /*-------------------------*/
 
-.cards h1{
+.cards h1 {
     padding: 0 2rem;
     font-family: 'Akrobat';
     text-align: left;
     padding-top: 1rem;
 }
 
+.contenido-card h1{
+    text-align: center;
+}
 
 
-.cards p{
-    padding: 0 2rem;
+
+.cards p {
+    text-align: justify;
+    font-size: 15px;
+    padding: 0 1.5rem;
     font-family: 'Biko';
     margin-top: -2rem;
     line-height: 30px;
 }
 
-.cards h2{
+.cards h2 {
     padding: 0 2rem;
     font-family: 'Biko';
     text-align: right;
     padding-top: 1rem;
 }
 
- .reservar-cards {
+.reservar-cards {
     z-index: 100;
-    position:relative;
-    top: -15px;
+    position: relative;
+    top: 22vw;
     margin-left: 13rem;
     background-color: #157A8A;
     font-family: 'Akrobat';
@@ -144,12 +158,12 @@
 
 
 /* ______________________________________________ ANIMACION ______________________________________________ */
-.container{
+.container {
     height: 100vh;
     padding: 5rem 2rem;
 }
 
-.card{
+.card {
     height: 70vh;
     width: 25vw;
     position: relative;
@@ -158,26 +172,300 @@
     cursor: pointer;
 }
 
-.card__1{
+.card__1 {
     box-shadow: 3px 8px 10px #BEB9B9;
     height: 45vh;
     width: 25vw;
     position: absolute;
+    top: 0px;
     background-color: white;
-    border-radius:10px ;
-}
-
-.card__1{
-    z-index: 5;
-    position: absolute;
+    border-radius: 10px;
+    z-index: 100;
     backface-visibility: hidden;
 }
 
-.card__2{
-    border-radius:10px;
+.card__2 {
+    border-radius: 10px;
     transform: rotateY(180deg);
 }
 
-.card:hover{
+.card:hover {
     transform: rotateY(180deg);
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* .container-cards-inicio{
+        background-color: blue;
+    } */
+
+    .habitaciones-precios{
+        height: 200vh;
+
+    }
+    .card:focus {
+        transform: rotateY(180deg);
+    }
+
+
+    .card__1 {
+        width: 70vw;
+        left: -1rem;
+        height: 90vh;
+        z-index: 100;
+    }
+
+    .contenido-card h2{
+        width: 40vw;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .card__1{
+        position: relative;
+        margin: 0 -1rem;
+        z-index: 3;
+    }
+
+    .card__2 {
+        transform: none;
+        z-index: -2;
+        background-color: white;
+        width: 60vw;
+        height: 90vh;
+        position: fixed;
+        left: -70rem;
+        top: -1rem;
+        margin: 0 -1rem;
+    }
+
+
+    .line-1,
+    .line-2,
+    .line-3 {
+        flex-direction: column;
+    }
+
+    .image-card-slide img{
+        padding: 0 auto;
+        /* border: 2px solid black; */
+        width: 68vw;
+        margin-left: -2rem;
+        height: 40vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .texto-icono-cardback img{
+        width: 25%;
+    }
+
+    .precio {
+        flex-direction: column;
+        line-height: 0px;
+    }
+
+    .precio h1 {
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+
+    .precio p {
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: -1rem;
+    }
+
+    .reservar-cards{
+        left: 1rem;
+        top: 160vw;
+        z-index: 100;
+        opacity: 1;
+    }
+
+    .container{
+        /* margin: 0 2rem; */
+        background-color: white;
+        padding-top: 1rem;
+        height: 160vh;
+    }
+    
+}
+
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        .card__1 {
+            display: flex;
+            align-items: center;
+            width: 70vw;
+            left: -0.5rem;
+            height: 65vh;
+            z-index: 100;
+        }
+
+        .card__2 {
+            transform: none;
+            z-index: -2;
+            background-color: white;
+            width: 65vw;
+            height: 68vh;
+            position: fixed;
+            left: -70rem;
+            top: -1rem;
+            margin: 0 -1rem;
+        }
+
+        .contenido-card h2{
+            width: auto;
+        }
+
+        .reservar-cards{
+            left: -12rem;
+            top: 140vw;
+            z-index: 100;
+            opacity: 1;
+        }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {        
+    .contenido-card h2{
+        width: auto;
+    }
+    .card__1 {
+            display: flex;
+            align-items: center;
+            width: 70vw;
+            left: -0.5rem;
+            height: 65vh;
+            z-index: 100;
+        }
+    
+        .card__2 {
+            transform: none;
+            z-index: -2;
+            background-color: white;
+            width: 65vw;
+            height: 72vh;
+            position: fixed;
+            left: -10rem;
+            top: -1rem;
+            margin: 0 50rem;
+        }
+        .reservar-cards{
+            left: 10rem;
+            top: 115vw;
+            z-index: 100;
+            opacity: 1;
+        }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
+    .reservar-cards{
+        left: 6rem;
+        top: 145vw;
+        z-index: 100;
+        opacity: 1;
+    }
+
+    .card__1 {
+        display: flex;
+        align-items: center;
+        width: 70vw;
+        left: -0.5rem;
+        height: 75vh;
+        z-index: 100;
+    }
+
+    .contenido-card h2{
+        width: fit-content;
+    }
+
+    .card__2 {
+        width: 68vw;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-cards-inicio{
+        height: 180vh;
+    }
+
+    .container{
+        height: 120vh;
+    }
+    .card:focus {
+        transform: rotateY(180deg);
+    }
+
+    .card__1 {
+        display: flex;
+        align-items: center;
+        width: 70vw;
+        left: -0.5rem;
+        height: 60vh;
+        z-index: 100;
+    }
+    .card__2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -50rem;
+        background-color: white;
+        height: 60vh;
+        width: 80vw;
+        transform: rotateY(380deg);
+    }
+
+    .reservar-cards{
+        left: -8rem;
+        top: 70vw;
+        z-index: 100;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .container-cards-inicio{
+        height: 180vh;
+    }
+
+    .container{
+        height: 120vh;
+    }
+
+    .contenido-card p{
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .contenido-card h2{
+        width: auto;
+        text-align: center;
+    }
+    .card__1{
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .card__2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -40rem;
+        height: 61vh;
+        width: 90vw;
+        transform: rotateY(380deg);
+        background-color: white;
+    }
+    .reservar-cards{
+        width: 50vw;
+        height: 10vh;
+        left: -8rem;
+        top: 45vw;
+        z-index: 100;
+        opacity: 1;
+    }
 }

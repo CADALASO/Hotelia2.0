@@ -353,13 +353,14 @@ a{
     }
 
     .banner-inicio-1 h1{
+        text-align: center;
         margin-bottom: 4rem;
-        font-size: 30px;
+        font-size: 38px;
     }
 
     .banner-inicio-1 h4{
-        text-align: right;
-        font-size: 18px;
+        text-align: center;
+        font-size: 20px;
     }
 
     .fecha{
@@ -417,24 +418,219 @@ a{
     .descubre-galeria img{
         width: 72vw;
     }
+
+    .experiencias{
+        height: 50vh;
+        padding: 0 1rem;
+    }
+
+    .text-experiencias{
+        margin-left: 1rem;
+        height: 40vh;
+        width: 90vw;
+        background-size: cover;
+    }
+
+    .text-exp-description{
+        font-size: 15px;
+        padding: 0 3rem;
+    }
+
+    .slide-expe{
+        margin-left: -1rem;
+        width: 70vw;
+    }
+
+    .ubicacion img{
+        width: 80vw;
+        margin: 2rem 1rem;
+    }
+
+    .line1-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line1-footer p{
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .section-banner{
+        padding: 0;
+        height: 160vh;
+    }
+    .banner-inicio-1{
+        width: 100vw;
+        align-items: center;
+    }
+    .banner-inicio-1 h1{
+        padding: 0;
+        width: auto;
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 50px;
+    }
+
+    .banner-inicio-1 h4{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .buscar-inicio form{
+        width: 50vw;
+        height: 70vh;
+        flex-direction: column;
+    }
+    .inputs-habs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .habs-label{
+        display: flex;
+        flex-direction: column;
+        margin-left: -2.8rem;
+    }
+
+    .habs-label .hab{
+        width: 42vw;
+    }
+
+    .habs-label label {
+        margin-right: 1rem;
+    }
+
+    .inputs input{
+        width: 50vw;
+    }
+
+    .descubre-hotelia{
+        width: auto;
+        flex-direction: column;
+        height: 150vh;
+        padding: 4rem 5rem;
+    }
+
+    .descubre{
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0rem;
+    }
+
+    .descubre h1{
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .descubre p{
+        width: 70vw;
+        text-align: center;
+    }
+
+    .descubre-galeria{
+        height: 35vh;
+        width: 72vw;
+        padding: 1rem 0rem;
+        margin: 2rem -1rem;
+    }
+
+    .descubre-galeria img{
+        width: 92vw;
+        margin: 0 1rem;
+    }
+
+    .imgs{
+        margin: 0 10rem;
+    }
+
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .section-banner{
+        height: 150vh;
+    }
+
+    .banner-inicio-1{
+     width: auto;}
     
     .buscar-inicio{
-        height: 15vh;
-        width: 10px;
+        display: flex;
+        justify-content: center;
     }
     
-
     .buscar-inicio form{
         flex-direction: column;
-        height:32vh;
+        height:45vh;
+        margin: -3rem 0;
+    }
+
+    .inputs input{
+        width: 70vw;
+    }
+
+    .inputs-habs{
+        margin-left: -4rem;
+    }
+
+    .habs-label label{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .habs-flex .hab{
+        padding-left: 3rem;
+        width: 17vw;
+    }
+
+    .habs-flex .border-hab-1{
+        width: 18vw;
     }
 
     .banner-inicio-1{width: 100%;text-align: right;}
     .banner-inicio-1 h1{
         text-align: right;
         width: 70vw;
+    }
+
+    .descubre-hotelia{
+        height: 50vh;
+        width: auto;
+        padding: 7rem 3rem;
+    }
+
+    .descubre-galeria{
+        padding: 3rem;
+        width: 30vw;
+        height: 35vh;
+    }
+
+    .experiencias{
+        padding: 0 5rem;
+        justify-content: center;
+    } 
+        
+
+    .text-experiencias{
+        width: 70vw;
+    }
+
+    .slide-expe{
+        width: 60vw;
+    }
+
+    .ubicacion img{
+        width: 30vw;
+        height: 40vh;
+    }
+
+    .ubicacion{
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

@@ -11,9 +11,7 @@ label{
     background-color: rebeccapurple;
 } */
 
-.estado-form-yes{
-    background-color: green;
-}
+
 
 .container-form-habs form{
     /* background-color: red; */
@@ -261,10 +259,3 @@ label{
     height:5vh;
     display: inline-block;
 }
-
-
-
-
-
-
-
