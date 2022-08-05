@@ -1,0 +1,16 @@
+:root{
+    --verde-botones: #157A8A;
+    --negro: #333333;
+}
+
+.container-list-habs h1{
+    text-align: center;
+    color: var(--negro);
+    padding-top: 2rem;
+    font-weight: 200;
+    font-family: 'Akrobat';
+}
+
+.cards-list-habitaciones{
+    background-color: blue;
+}
