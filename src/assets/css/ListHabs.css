@@ -9,21 +9,6 @@
     color: white;
 }
 
-.habs-cards-list{
-    object-fit: cover;
-    object-position: left;
-    border-radius: 3px;
-    width: 25vw;
-    height: 35vh;
-}
-
-.contenido-list .descrip{
-    padding: 1rem 10px;
-    text-align: center;
-    font-size: 15px;
-    line-height:30px;
-}
-
 
 .container-list-habs h1{
     text-align: center;
@@ -33,272 +18,156 @@
     font-family: 'Akrobat';
 }
 
+:root{
+    --verde-botones: #157A8A;
+    --negro: #333333;
+}
+
+.container-list-habs h1{
+    text-align: center;
+    color: var(--negro);
+    padding-top: 2rem;
+    font-weight: 200;
+    font-family: 'Akrobat';
+}
+
+.list-cards-vertical{
+    /* background-color: blue; */
+    padding: 1rem 3rem;
+}
 
 
-.contenido-list h1{
-    font-weight: bold;
-    margin-bottom: 3rem;
-    color: initial;
+.info-image-card{
+    /* background-color: red; */
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    margin: 1rem 1rem;
 }
 
-
-.container-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding: 5rem 2rem;
-}
-
-.cards-list-habs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 52vw 52vw auto;
-    gap: 30px 12px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "container-list container-list container-list"
-        "container-list container-list container-list";
-}
-
-/* -------CARDS------- */
-
-
-.card__2-list{
-    box-shadow: 3px 8px 10px #BEB9B9;
-    height: 48vh;
-    color: #4C4C4C;
+.cards-horizontal{
+    background-color: white;
     background-image: url('../img/Vector\ 9.png');
     background-position: right top;
-    background-size: scale-down;
     background-repeat: no-repeat;
-}
+    border-radius: 10px;
 
-.line-1-list, .line-2-list, .line-3-list{
-    font-size: 28px;
+    width: 55vw;
+    height: 45vh;
+    box-shadow: 2px 2px 10px grey;
+    padding: 1.5rem 1rem;
+
     display: flex;
-    justify-content: center;
-}
-
-.line-1-list p, .line-2-list p, .line-3-list p{
-    font-size: 25px;
-}
-
-.line-1-list i, .line-2-list i, .line-3-list i{
-    margin-right: 5px;
-    margin-left: 10px;
-}
-
-.texto-icono-cardback-list{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Biko';
-    margin: 20px 0;
 }
 
-.texto-icono-cardback-list p{
-    margin: 0 8px;
-    font-size: 20px;
-}
-
-
-.texto-icono-cardback-list img{
-    width: 80%;
-}
-
-.precio-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Akrobat';
-}
-
-.precio-list p{
-    padding: 1px 0rem;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.precio-list .titulo-precio{
-    font-size: 25px;
-    font-weight: bold;
-    padding: 0 1rem;
-}
-
-/* Imagenes de las cards---------------*/
-.cards-list{
-    padding: 1rem 0;
-}
-
-.habs-cards{
-    padding: 0 auto;
-    width: 26vw;
-    height: 40vh;
+.image-room img{
+    border-radius: 5px;
     object-fit: cover;
     object-position: center;
+    box-shadow: 1px 1px 5px grey;
+    width: 30vw;
+    height: 50vh;
 }
 
-.img-cards-slide{
-    width: 26vw;
-    border-radius: 20px; 
-    position: relative;
-    top: -30px;
+.info-list{
+    /* background-color: red; */
+    padding: 0 1.5rem;
+    width: 30vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-
-
-/*-------------------------*/
-
-.cards-list h1{
-    padding: 0 2rem;
-    font-family: 'Akrobat';
-    text-align: left;
-    padding-top: 1rem;
+.info-list h1{
+    padding: 0;
+    font-weight: bold;
 }
 
-
-
-.cards-list p{
-    padding: 0 2rem;
+.info-list p{
+    text-align: justify;
     font-family: 'Biko';
-    margin-top: -2rem;
+    color: var(--negro);
     line-height: 30px;
 }
 
-.cards-list h2{
-    padding: 0 2rem;
-    font-weight: 550;
-    font-family: 'Biko';
-    text-align: center;
-}
-
-
-
-
-
-
-/* ______________________________________________ ANIMACION ______________________________________________ */
-
-
-.card-list{
-    border-radius: 10px;
-    height: 39.5vh;
-    width: 25vw;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 1s linear;
-    cursor: pointer;
-}
-
-.card__1-list{
-    box-shadow: 3px 8px 10px #BEB9B9;
-    height: 50vh;
-    width: 25vw;
-    position: absolute;
-    top: -70px;
-    background-color: white;
-    border-radius:10px ;
-    z-index: 5;
-    backface-visibility: hidden;
-}
-
-.card__2-list{
-    width: 25vw;
-    position: absolute;
-    top: -55px;
-    border-radius:10px;
-    transform: rotateY(180deg);
-}
-
-.card-list:hover{
-    transform: rotateY(180deg);
-}
-
-
-/* --------------------------------------------------FRONT--------------------------------------------------*/ 
-
-.button-card-inicio-list{
-    position: relative;
-    top: 25vw;
-    left: -0.5rem;
-}
-
-.disponible-cards-list{
-    z-index: 100;
-    width: 12vw;
-    position:relative;
-    top: -15px;
-    left: 2rem;
-    background-color: #BDBDBD;
-    box-shadow: 3px 8px 10px #BEB9B9;
+.info-list h2{
+    text-align: right;
     font-family: 'Akrobat';
+    font-size: 30px;
+}
+
+.price-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Akrobat';
+}
+
+.price-list h1{
+    font-weight: bold;
+    padding: 0;
+}
+
+.price-list p{
+    font-family: 'Akrobat';
+    font-size: 25px;
+}
+
+.details{
+    /* background-color: #157A8A; */
+    width: 22vw;
+    height: 30vh;
+    font-size: 22px;
     color: var(--negro);
-    border: none;
-    font-size: 18px;
-    padding: 0.7rem 5px;
-    font-weight: bold;
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.disponible-cards-list i{
-    text-shadow: 0px 4px 4px #00000040;
-    color: #61FF00;
-    margin-right: 5px;
+.lines{
+    display: flex;
+    margin: 1rem 0;
+    font-family: 'Biko';
 }
 
-.editar-cards-list {
-    z-index: 100;
-    box-shadow: 3px 8px 10px #BEB9B9;
-    width: 10vw;
-    position:relative;
-    top: -60px;
-    margin-left: 13rem;
+.each-thing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.each-thing img{
+    width: 55%;
+}
+
+.each-thing i{
+    margin: 0 10px;
+}
+
+.edit-rooms{
+    margin-top: 1rem;
     background-color: var(--negro);
-    font-family: 'Akrobat';
     color: white;
+    padding: 8px 2rem;
     border: none;
-    font-size: 18px;
-    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    font-family: 'Akrobat';
     font-weight: bold;
-    border-radius: 4px;
+    font-size: 20px;
+    width: 20vw;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .cards-list-habs {
-        grid-template-columns: 1fr;
-        grid-template-rows: 120vh 120vh 120vh 120vh 120vh 120vh auto;
-        grid-template-areas:
-        "container-list"  
-        "container-list"
-        "container-list"
-        "container-list"
-        "container-list"
-        "container-list";
-    }
-
-    .card__1-list{
-        width: 65vw;
-        height: 90vh;
-        left: -4rem;
-        
-    }
-
-    .card__1-list h1{
-        text-align: center;
-    }
-
-    .card-list{
-        background-color: red;
-    }
-
-    .button-card-inicio-list{
-        display: flex;
-        flex-direction: column;
-    }
+.out{
+    display: flex;
+    align-items: center;
 }
+
+
 
