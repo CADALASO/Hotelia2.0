@@ -37,6 +37,7 @@ function ListHabs() {
                 <h1>HABITACIONES</h1>
             
             
+            
                 <div className='cards-list-habitaciones'>
                     {
                         habitaciones?.map(habitacion => (
