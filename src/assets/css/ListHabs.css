@@ -9,7 +9,6 @@
     color: white;
 }
 
-
 .container-list-habs h1{
     text-align: center;
     color: var(--negro);
@@ -18,24 +17,15 @@
     font-family: 'Akrobat';
 }
 
-:root{
-    --verde-botones: #157A8A;
-    --negro: #333333;
-}
+/* :::::::::::::::::::: BUSQUEDA :::::::::::::::::::: */
 
-.container-list-habs h1{
-    text-align: center;
-    color: var(--negro);
-    padding-top: 2rem;
-    font-weight: 200;
-    font-family: 'Akrobat';
-}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 .list-cards-vertical{
     /* background-color: blue; */
     padding: 1rem 3rem;
 }
-
 
 .info-image-card{
     /* background-color: red; */

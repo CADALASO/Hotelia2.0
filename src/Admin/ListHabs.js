@@ -13,6 +13,7 @@ function ListHabs() {
     const [habitaciones, setHabitaciones] = useState([]);
     const [modal, setModal] = useState(false);
     const [habitacion, setHabitacion] = useState({})
+    
 
     useEffect(() => {
         if(!modal)
@@ -23,19 +24,19 @@ function ListHabs() {
 
     }, [modal])
 
-
     // const handleSelect = async(room, selectedStatus) =>{
     //     const response = await axios.put(`${api}${room._id}`, {...room, estado: selectedStatus});
 
     // }
-    
+
     return (
         <div>
             <div className='nav-bar-list'>Header</div>
             
             <div className='container-list-habs'>
                 <h1>HABITACIONES</h1>
-
+            
+            
                 <div className='cards-list-habitaciones'>
                     {
                         habitaciones?.map(habitacion => (

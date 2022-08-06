@@ -104,7 +104,7 @@ function CardSlide() {
             <Slider {...settings}>
                 {
                     habitaciones?.map(habitaciones => (
-                        <div className="container">
+                        <div className="container-home">
                             <div className="image-card-slide">
                                 <img src={`https://hoteliakuepa.herokuapp.com${habitaciones.img}`} className="habs-cards" alt="fotos"/>
                             </div>
