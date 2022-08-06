@@ -193,7 +193,7 @@ function FormHab() {
                                                 type="radio" 
                                                 name="safeselection" 
                                                 onChange={handleChange} 
-                                                value={true}
+                                                value={"Si"}
                                                 />
                                             <label className='formulario__label'>Si</label>
                                         </div>
@@ -203,7 +203,7 @@ function FormHab() {
                                                 type="radio" 
                                                 name="safeselection"
                                                 onChange={handleChange}
-                                                value={false}
+                                                value={"No"}
                                                 />
                                             <label className='formulario__label'>No</label>
                                         </div>
@@ -216,7 +216,7 @@ function FormHab() {
                                                 type="radio"
                                                 name='wifi'
                                                 onChange={handleChange}
-                                                value={true}/>
+                                                value={"Si"}/>
                                             <label className='formulario__label'>Si</label>
                                         </div>
 
@@ -225,7 +225,7 @@ function FormHab() {
                                                 type="radio"
                                                 name='wifi'
                                                 onChange={handleChange}
-                                                value={false}/>
+                                                value={"No"}/>
                                             <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
@@ -239,7 +239,7 @@ function FormHab() {
                                             <input type="radio" 
                                             name='nevera'
                                             onChange={handleChange}
-                                            value={true}/>
+                                            value={"Si"}/>
                                             <label className='formulario__label'>Si</label>
                                         </div>
 
@@ -247,7 +247,7 @@ function FormHab() {
                                             <input type="radio" 
                                             name='nevera'
                                             onChange={handleChange}
-                                            value={false}/>
+                                            value={"No"}/>
                                             <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
@@ -258,7 +258,7 @@ function FormHab() {
                                             <input type="radio" 
                                             name='tv'
                                             onChange={handleChange}
-                                            value={true}/>
+                                            value={"Si"}/>
                                             <label className='formulario__label'>Si</label>
                                         </div>
 
@@ -266,7 +266,7 @@ function FormHab() {
                                             <input type="radio" 
                                             name='tv'
                                             onChange={handleChange}
-                                            value={false}/>
+                                            value={"No"}/>
                                             <label className='formulario__label'>No</label>
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@ function FormHab() {
                                                 type="radio"
                                                 name='banio'
                                                 onChange={handleChange}
-                                                value={true} />
+                                                value={"Si"} />
                                             <label className='formulario__label'>Si</label>
                                         </div>
 
@@ -289,7 +289,7 @@ function FormHab() {
                                                 type="radio"
                                                 name='banio'
                                                 onChange={handleChange}
-                                                value={false} />
+                                                value={"No"} />
                                             <label className='formulario__label'>No</label>
                                         </div>
                                     </div>

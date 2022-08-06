@@ -10,19 +10,17 @@ import Swal from 'sweetalert2';
 
 function ListHabs() {
     const [habitaciones, setHabitaciones] = useState([]);
+    const [modal, setModal] = useState(false);
+    const [habitacion, setHabitacion] = useState({})
+
     useEffect(() => {
+        if(!modal)
         axios(api).then(res => {
             console.log(res)
             setHabitaciones(res.data)
         })
 
-    }, [])
-
-    const [modal, setModal] = useState(false);
-    const [habitacion, setHabitacion] = useState({})
-
-    
-    const apidelete = 'https://hoteliakuepa.herokuapp.com/habitaciones/id'
+    }, [modal])
 
 
     const handleSelect = async(room, selectedStatus) =>{
@@ -49,15 +47,15 @@ function ListHabs() {
 
                                     <div className="button-card-inicio-list">
                                         
-                                        <div className='disponible'>
+                                        {/* <div className='disponible'> */}
                                             {/* <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button> */}
 
-                                            <select name="estado" onChange={(e)=>handleSelect(habitacion,e.target.value)} className="disponible-cards-list">
+                                            {/* <select name="estado" onChange={(e)=>handleSelect(habitacion,e.target.value)} className="disponible-cards-list">
                                                 <option value="DISPONIBLE">DISPONIBLE</option>
                                                 <option value="NO DISPONIBLE">NO DISPONIBLE</option>
                                                 <option value="EN MANTENIMIENTO">EN MANTENIMIENTO</option>
-                                            </select>
-                                        </div>
+                                            </select> */}
+                                        {/* </div> */}
 
                                         <button
                                             onClick={() => {

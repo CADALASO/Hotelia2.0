@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Nevera from '../assets/img/iconos/nevera.png'
 import Cerrar from '../assets/img/iconos/CERRAR.png'
@@ -11,19 +11,17 @@ function Modal({ habitacion, close }) {
     
 
     const handleEdit = async(e) => {
-        //e.preventDefault()
+        // e.preventDefault()
         console.log(`${api}${habitacion._id}`)
         const response = await axios.put(`${api}${habitacion._id}`, room);//await espera hasta que se ejcute la petición
         console.log(response);
         if (response.status === 200) {
-
             Swal.fire(
                 'Guardado!',
                 `El personaje <strong> ${habitacion.nombrehab}</strong> ha sido guardado exitosamente!`,
                 'success'
             )
             handleClose();
-
         } else {
             Swal.fire(
                 'Error!',
@@ -31,8 +29,6 @@ function Modal({ habitacion, close }) {
                 'error'
             )
         }
-
-        
     }
 
     const handleClose = () => {
@@ -44,6 +40,8 @@ function Modal({ habitacion, close }) {
     const handleValues = (event) => {
         setRoom({...room,[event.target.name]:event.target.value})
     }
+
+    
 
     return (
         <div>
@@ -75,15 +73,15 @@ function Modal({ habitacion, close }) {
                                 <div className='line2-habitacion-edit'>
                                     <div className='flex-form-edit capacidad-personas'>
                                         <label>Capacidad de Personas:</label>
-                                        <input value={room.capacidad} name='capacidad' id='capacidad' type='number'/>
+                                        <input value={room.capacidad} onChange={handleValues} name='capacidad' id='capacidad' type='number'/>
                                     </div>
                                     <div className='flex-form-edit precio-edit'>
                                         <label>Precio:</label>
-                                        <input value={habitacion.valornoche} name='valornoche' id='valornoche' className='precio-form-edit' type='number'/>
+                                        <input value={habitacion.valornoche} onChange={handleValues} name='valornoche' id='valornoche' className='precio-form-edit' type='number'/>
                                     </div>
                                     <div className='flex-form-edit'>
                                         <label>No. de Camas:</label>
-                                        <input value={room.camas} name='camas' id='camas' className='no-camas' type='number' />
+                                        <input value={room.camas} onChange={handleValues} name='camas' id='camas' className='no-camas' type='number' />
                                     </div>
 
                                 </div>
@@ -91,7 +89,7 @@ function Modal({ habitacion, close }) {
                                 <div className='line3-habitacion-edit'>
                                     <div className='flex-form-edit'>
                                         <label>Descripción:</label>
-                                        <textarea value={room.descripcion} id="descripcion" name="descripcion" rows="7" cols="33" className='textarea-edit' />
+                                        <textarea value={room.descripcion} onChange={handleValues} id="descripcion" name="descripcion" rows="7" cols="33" className='textarea-edit' />
                                     </div>
 
                                 </div>
@@ -103,11 +101,11 @@ function Modal({ habitacion, close }) {
                                         <label>Fotos:</label>
                                         <div className='flex-select-edit'>
                                             <input
-                                                value={room.img}
+                                                filename={room.img}
                                                 name='img'
                                                 id='img'
                                                 className='fotos-edit-edit'
-                                                type='file' />
+                                                type='file'/>
                                         </div>
                                     </div>
                                 </div>
@@ -115,9 +113,9 @@ function Modal({ habitacion, close }) {
                                 <div className='line4.5-habitacion-edit flex-form-edit'>
                                     <label>Estado:</label>
                                     <select name="estado" className='estado-form-list'>
-                                        <option value={habitacion.estado} className='estado-form-yes'>DISPONIBLE</option>
-                                        <option value={habitacion.estado} className='estado-form-no'>NO DISPONIBLE</option>
-                                        <option value={habitacion.estado} className='estado-form-upkeep'>EN MANTENIMIENTO</option>
+                                        <option value={habitacion.estado} selected={habitacion.estado==="Disponible"?true:false} className='estado-form-yes'>DISPONIBLE</option>
+                                        <option value={habitacion.estado} selected={habitacion.estado==="No disponible"?true:false} className='estado-form-no'>NO DISPONIBLE</option>
+                                        <option value={habitacion.estado} selected={habitacion.estado==="En mantenimiento"?true:false} className='estado-form-upkeep'>EN MANTENIMIENTO</option>
                                     </select>
 
                                 </div>
@@ -134,19 +132,23 @@ function Modal({ habitacion, close }) {
                                                     </p>
                                                     <div className='selectors-radio-edit'>
                                                         <input 
+                                                            value={true}
                                                             name='cajafuerte' 
                                                             id='cajafuerte' 
                                                             type="radio" 
-                                                            {...room.cajafuerte=="si"?"Checked":" "}/>
+                                                            checked={room.cajafuerte==="si"?true:false}
+                                                            onChange={handleValues}/>
                                                         <label>Si</label>
                                                     </div>
 
                                                     <div className='selectors-radio-edit'>
                                                         <input 
+                                                            value={false}
                                                             name='cajafuerte' 
                                                             id='cajafuerte' 
                                                             type="radio" 
-                                                            {...room.cajafuerte=="si"?"Checked":" "} />
+                                                            checked={room.cajafuerte==="no"?true:false}
+                                                            onChange={handleValues}/>
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -159,7 +161,9 @@ function Modal({ habitacion, close }) {
                                                         <input 
                                                         name='wifi' 
                                                         id='wifi' 
-                                                        type="radio" />
+                                                        type="radio" 
+                                                        onChange={handleValues}
+                                                        checked={room.wifi==="si"?true:false}/>
                                                         <label>Si</label>
                                                     </div>
 
@@ -168,7 +172,8 @@ function Modal({ habitacion, close }) {
                                                         name='wifi' 
                                                         id='wifi' 
                                                         type="radio" 
-                                                        checked />
+                                                        onChange={handleValues} 
+                                                        checked={room.wifi==="no"?true:false}/>
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -184,7 +189,9 @@ function Modal({ habitacion, close }) {
                                                         <input 
                                                             name='nevera' 
                                                             id='nevera' 
-                                                            type="radio" />
+                                                            type="radio"
+                                                            onChange={handleValues} 
+                                                            checked={room.nevera==="si"?true:false}/>
                                                         <label>Si</label>
                                                     </div>
 
@@ -193,7 +200,8 @@ function Modal({ habitacion, close }) {
                                                             name='nevera' 
                                                             id='nevera' 
                                                             type="radio" 
-                                                            checked />
+                                                            onChange={handleValues}
+                                                            checked={room.nevera==="no"?true:false} />
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -206,7 +214,9 @@ function Modal({ habitacion, close }) {
                                                         <input 
                                                             name='tv' 
                                                             id='tv' 
-                                                            type="radio" />
+                                                            type="radio" 
+                                                            onChange={handleValues}
+                                                            checked={room.tv==="si"?true:false}/>
                                                         <label>Si</label>
                                                     </div>
 
@@ -215,7 +225,8 @@ function Modal({ habitacion, close }) {
                                                             name='tv' 
                                                             id='tv' 
                                                             type="radio" 
-                                                            checked />
+                                                            onChange={handleValues}
+                                                            checked={room.tv==="no"?true:false} />
                                                         <label >No</label>
                                                     </div>
                                                 </div>
@@ -230,7 +241,9 @@ function Modal({ habitacion, close }) {
                                                         <input 
                                                             name='banio' 
                                                             id='banio' 
-                                                            type="radio" />
+                                                            type="radio"
+                                                            onChange={handleValues} 
+                                                            checked={room.banio==="si"?true:false}/>
                                                         <label>Si</label>
                                                     </div>
 
@@ -239,7 +252,8 @@ function Modal({ habitacion, close }) {
                                                             name='banio' 
                                                             id='banio' 
                                                             type="radio" 
-                                                            checked />
+                                                            onChange={handleValues}
+                                                            checked={room.banio==="no"?true:false}/>
                                                         <label >No</label>
                                                     </div>
                                                 </div>
